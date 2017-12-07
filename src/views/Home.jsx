@@ -1,19 +1,26 @@
 import React from 'react'
 import { } from 'react-router-dom'
-import { Title, Center, Primary, BlackGradient } from "../components/styles"
+import { Title, CenterBox, Primary, BlackGradient } from "../components/styles"
+import GalleryPlayer from "../components/GalleryPlayer";
 
 export default class Home extends React.Component {
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            gallery: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg']
+        };
+    }
 
     render () {
         return (
             <div>
                 <header style={styles.header}>
-                    <Center>
+                    <CenterBox>
                         <img width={190} src="./assets/images/logo.png" alt="Hacka White Logo"/>
                         <Title>Hacka<Primary>{'{Iran}'}</Primary></Title>
-                    </Center>
-                    <BlackGradient />
-                    <video src="./assets/videos/bg.mp4" style={styles.video} autoPlay={true} loop />
+                    </CenterBox>
+                    <GalleryPlayer dir="./assets/images/gallery/" images={this.state.gallery} />
                 </header>
             </div>
         )
@@ -27,8 +34,6 @@ const styles = {
         position: 'relative',
         height: 500,
         overflow: 'hidden'
-    },
-    video: {
-        width: '100%'
     }
+
 };

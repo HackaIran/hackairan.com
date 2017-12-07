@@ -11,7 +11,7 @@ export const Container = styled.div`
     color: white;
 `;
 
-export const Center = styled.div`
+export const CenterBox = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;

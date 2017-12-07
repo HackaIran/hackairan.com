@@ -20,6 +20,7 @@ export default class Home extends React.Component {
                         <img width={190} src="./assets/images/logo.png" alt="Hacka White Logo"/>
                         <Title>Hacka<Primary>{'{Iran}'}</Primary></Title>
                     </CenterBox>
+                    <BlackGradient />
                     <GalleryPlayer dir="./assets/images/gallery/" images={this.state.gallery} />
                 </header>
             </div>

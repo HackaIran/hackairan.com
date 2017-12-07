@@ -3,7 +3,7 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="JSX" />
   </component>
-  <component name="PreferredVcsStorage">
-    <preferredVcsName>ApexVCS</preferredVcsName>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/.gitignore" />
   </component>
 </project>

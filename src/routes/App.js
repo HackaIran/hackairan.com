@@ -3,17 +3,18 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+import { Container } from "../components/styles"
 
 import Home from '../views/Home'
 import Contact from '../views/Contact'
 
 const App = () => (
     <Router>
-        <div>
+        <Container>
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact} />
-        </div>
+        </Container>
     </Router>
-)
+);
 
 export default App

@@ -8,7 +8,7 @@ export default class Home extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            gallery: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg']
+            gallery: ['1.jpg', '2.jpg', '3.jpg', '4.jpg']
         };
     }
 
@@ -21,7 +21,7 @@ export default class Home extends React.Component {
                         <Title>Hacka<Primary>{'{Iran}'}</Primary></Title>
                     </CenterBox>
                     <BlackGradient />
-                    <GalleryPlayer dir="./assets/images/gallery/" images={this.state.gallery} />
+                    <GalleryPlayer interval={4000} dir="./assets/images/gallery/" images={this.state.gallery} />
                 </header>
             </div>
         )
@@ -30,11 +30,9 @@ export default class Home extends React.Component {
 }
 
 const styles = {
-
     header: {
         position: 'relative',
-        height: 500,
+        height: 600,
         overflow: 'hidden'
     }
-
 };

@@ -1,0 +1,28 @@
+{
+  "name": "hackairan.com",
+  "version": "1.0.0",
+  "description": "Hacka{Iran}'s Website",
+  "main": "index.js",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  },
+  "scripts": {
+    "start": "http-server ./public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackaIran/hackairan.com.git"
+  },
+  "keywords": [
+    "hacka",
+    "hackairan",
+    "website"
+  ],
+  "author": "Alireza Sheikholmolouki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HackaIran/hackairan.com/issues"
+  },
+  "homepage": "https://github.com/HackaIran/hackairan.com#readme"
+}

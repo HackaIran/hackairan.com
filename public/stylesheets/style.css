@@ -16,3 +16,22 @@
     top: 0;
     left: 0;
 }
+
+.arrow-down:after, .arrow-down:before {
+    content: ' ';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    border-radius: 10px;
+    background: white;
+}
+.arrow-down:after {
+    transform: translate(-50%, -50%) rotate(45deg) translateX(-50%) translateX(1px);
+}
+.arrow-down:before {
+    transform: translate(-50%, -50%) rotate(-45deg) translateX(50%) translateX(-1px);
+}
+
+.white {
+    color: white;
+}

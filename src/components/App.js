@@ -3,12 +3,14 @@ import Radium from 'radium'
 import color from 'color'
 
 import Header from './Header'
+import Events from './Events'
 
 class App extends React.Component {
     render() {
         return (
             <div style={styles.app}>
-                <Header />
+                <Header height={500} />
+                <Events />
             </div>
         )
     }

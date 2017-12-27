@@ -17,8 +17,8 @@ class Event extends React.Component {
 
 const styles = {
     container: {
-        width: 250,
-        height: 250,
+        width: 230,
+        height: 230,
         display: 'inline-block',
         marginRight: 8,
         marginLeft: 8,
@@ -29,13 +29,12 @@ const styles = {
         transitionDuration: '0.1s',
 
         ':hover': {
-            transform: 'scale(0.98)',
             opacity: 0.8
         },
 
         ':active': {
-            transform: 'scale(0.92)',
-            opacity: 0.5
+            transform: 'scale(0.98)',
+            opacity: 0.6
         }
     },
     image: {

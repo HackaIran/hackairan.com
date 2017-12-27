@@ -67,19 +67,19 @@ const styles = {
         color: 'white',
         fontSize: 45,
         fontWeight: 'normal',
-        marginBottom: 10,
+        marginBottom: 25,
         pointerEvents: 'none',
         userSelect: 'none'
     },
     description: {
         color: 'white',
-        fontSize: 15,
+        fontSize: 18,
         fontWeight: 100,
         lineHeight: '25px'
     },
     arrowDown: {
         position: 'absolute',
-        bottom: '20%',
+        bottom: '16%',
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 3,

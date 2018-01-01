@@ -43,9 +43,26 @@
     height: 80%;
     width: 2px;
 }
+.timeline .now:before {
+    content: ' ';
+    width: 50px;
+    height: 30px;
+    filter: blur(7px);
+    background: #1d1d1d;
+    position: absolute;
+    display: block;
+    z-index: 8;
+    top: 50%;
+    left: 50%;
+    color: transparent;
+    border-radius: 50% 50%;
+    transform: translate(-50%, -50%);
+}
 .timeline .now:after {
     content: 'now';
     position: absolute;
+    z-index: 9;
+    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

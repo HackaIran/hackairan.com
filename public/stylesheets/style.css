@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
 }
-
 *::selection {
     background: #fec10b;
 }
@@ -34,4 +33,22 @@
 
 .white {
     color: white;
+}
+
+.timeline .now {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+    width: 2px;
+}
+.timeline .now:after {
+    content: 'now';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fec10b;
+    text-shadow: 0 0 20px #333;
 }

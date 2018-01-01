@@ -15,7 +15,8 @@ class UpComingEvents extends React.Component {
                         <p style={styles.eventDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.</p>
                         <a style={styles.eventRegister} href="https://evand.com" target="_blank">Register</a>
                     </div>
-                    <div style={styles.timeline}>
+                    <div className="timeline" style={styles.timeline}>
+                        <div className="now" style={styles.now} />
                     </div>
                 </div>
                 <aside style={styles.aside}>
@@ -46,7 +47,7 @@ class UpComingEvents extends React.Component {
 const styles = {
     container: {
         display: 'flex',
-        height: 500,
+        height: 450,
         marginTop: 50,
         marginBottom: 100,
         flexDirection: 'row',
@@ -103,8 +104,12 @@ const styles = {
     },
     timeline: {
         background: 'linear-gradient(transparent, rgba(255, 255, 255, 0.2)',
-        flexBasis: 180,
-        minHeight: 180,
+        flexBasis: 150,
+        minHeight: 150,
+        position: 'relative'
+    },
+    now: {
+        background: colors.highlight,
     },
     aside: {
         background: colors.dark,

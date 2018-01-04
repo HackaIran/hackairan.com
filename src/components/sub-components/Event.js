@@ -1,7 +1,7 @@
 import React from 'react'
 import Radium from 'radium'
 
-import colors from '../shared/colors'
+import colors from '../../shared/colors'
 
 class Event extends React.Component {
     render() {

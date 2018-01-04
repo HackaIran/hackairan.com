@@ -3,6 +3,8 @@ import Radium from 'radium'
 
 import colors from '../shared/colors'
 
+import TimelineBar from './sub-components/TimelineBar'
+
 class UpComingEvents extends React.Component {
     render() {
         return (
@@ -16,6 +18,7 @@ class UpComingEvents extends React.Component {
                         <a style={styles.eventRegister} href="https://evand.com" target="_blank">Register</a>
                     </div>
                     <div className="timeline" style={styles.timeline}>
+                        <TimelineBar />
                         <div className="now" style={styles.now} />
                     </div>
                 </div>
@@ -47,7 +50,7 @@ class UpComingEvents extends React.Component {
 const styles = {
     container: {
         display: 'flex',
-        height: 450,
+        minHeight: 450,
         marginTop: 50,
         marginBottom: 100,
         flexDirection: 'row',

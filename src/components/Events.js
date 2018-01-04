@@ -1,7 +1,7 @@
 import React from 'react'
 import Radium from 'radium'
 
-import Event from './Event'
+import Event from './sub-components/Event'
 
 class Events extends React.Component {
     render() {

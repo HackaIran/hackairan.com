@@ -52,7 +52,7 @@ const styles = {
         transform: 'translateX(-50%)',
     },
     remaining: {
-        fontSize: 13,
+        fontSize: 12,
         position: 'absolute',
         bottom: -50,
         left: '50%',

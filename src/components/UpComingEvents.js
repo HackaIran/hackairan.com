@@ -6,21 +6,86 @@ import colors from '../shared/colors'
 import TimelineBar from './sub-components/TimelineBar'
 
 class UpComingEvents extends React.Component {
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            selectedEvent: {
+                id: -1,
+                title: 'loading',
+                location: 'loading',
+                city: 'loading',
+                timestamp: Date.now() + 100000000,
+                description: 'loading',
+                registerLink: ''
+            },
+            events: [],
+        };
+    }
+
+    componentDidMount () {
+        this.fetchEvents();
+    }
+
+    fetchEvents () {
+        const events = [
+            {
+                id: 0,
+                title: 'Hacka{Karaj} 3',
+                location: 'Startup House',
+                city: 'Karaj, Iran',
+                timestamp: 1512551313547,
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
+                registerLink: 'https://evand.com/startuphouse'
+            },
+            {
+                id: 1,
+                title: 'Hackademy',
+                location: 'Avatech',
+                city: 'Tehran, Iran',
+                timestamp: 1517051313547,
+                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ciure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
+                registerLink: 'https://evand.com/avatech'
+            },
+            {
+                id: 2,
+                title: 'Hacka{Karaj} 4',
+                location: 'Azad University Of Karaj',
+                city: 'Karaj, Iran',
+                timestamp: 1516051313547,
+                description: 'Lorem ipsum dolor sit amet, cng elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
+                registerLink: 'https://evand.com/azad'
+            }
+        ];
+        this.setState({ events: events, selectedEvent: events[0] });
+    }
+
+    get bars () {
+        const bars = [];
+        for (let event of this.state.events) {
+            bars.push(<TimelineBar
+                key={event.id}
+                timestamp={event.timestamp}
+                active={ this.state.selectedEvent.id === event.id }
+            />)
+        }
+        return bars;
+    }
+
     render() {
+        const currentEvent = this.state.selectedEvent;
         return (
             <div style={styles.container}>
                 <div style={styles.showBox}>
                     <div style={styles.selectedEvent}>
-                        <h2 style={styles.eventTitle}>HackaKaraj 3</h2>
-                        <h3 style={styles.eventLocation}>Startup House / <b>Alborz Karaj</b></h3>
-                        <time style={styles.eventDate}>Dec 13 - 25 Aban</time>
-                        <p style={styles.eventDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.</p>
-                        <a style={styles.eventRegister} href="https://evand.com" target="_blank">Register</a>
+                        <h2 style={styles.eventTitle}>{ currentEvent.title } </h2>
+                        <h3 style={styles.eventLocation}>{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
+                        <time style={styles.eventDate}>{ currentEvent.timestamp }</time>
+                        <p style={styles.eventDescription}>{ currentEvent.description }</p>
+                        <a style={styles.eventRegister} href={ currentEvent.registerLink } target="_blank">Register</a>
                     </div>
                     <div className="timeline" style={styles.timeline}>
-                        <TimelineBar timestamp={1512551313547} active={false} />
-                        <TimelineBar timestamp={1517051313547} active={true} />
-                        <TimelineBar timestamp={1516051313547} active={false} />
+                        { this.bars }
                         <div className="now" style={styles.now} />
                     </div>
                 </div>

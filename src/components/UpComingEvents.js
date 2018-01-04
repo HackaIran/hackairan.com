@@ -18,7 +18,9 @@ class UpComingEvents extends React.Component {
                         <a style={styles.eventRegister} href="https://evand.com" target="_blank">Register</a>
                     </div>
                     <div className="timeline" style={styles.timeline}>
-                        <TimelineBar />
+                        <TimelineBar timestamp={1512551313547} active={false} />
+                        <TimelineBar timestamp={1517051313547} active={true} />
+                        <TimelineBar timestamp={1516051313547} active={false} />
                         <div className="now" style={styles.now} />
                     </div>
                 </div>
@@ -63,9 +65,7 @@ const styles = {
     },
     selectedEvent: {
         flexGrow: 1,
-        padding: 40,
-        paddingLeft: 60,
-        paddingRight: 60,
+        padding: '40px 60px',
         position: 'relative'
     },
     eventTitle: {

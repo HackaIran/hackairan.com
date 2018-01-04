@@ -4,15 +4,20 @@ import moment from 'moment'
 
 class TimelineBar extends React.Component {
     render() {
-        const date = moment(1516051313547);
-        const diffWithNow = moment().diff(date, 'days');
-        const remaining = -diffWithNow + ' days to go';
-        const left = (-diffWithNow / 60 * 50) + 50;
+        const date = moment(this.props.timestamp);
+        const diffWithNow = -moment().diff(date, 'days');
+        let remaining = Math.abs(diffWithNow) + ' days';
+        if (Math.abs(diffWithNow) > 30) remaining = '~' + Math.floor(Math.abs(diffWithNow) / 30) + ' months';
+        remaining += diffWithNow < 0 ? ' ago' : ' to go';
+        if (diffWithNow === 0) remaining = 'today';
+        const left = (diffWithNow / 60 * 50) + 50;
+        const containerStyle = [styles.container, {left: left + '%'}];
+        if (!this.props.active) containerStyle.push(styles.notActive);
         return (
-            <div style={[styles.container, {left: left + '%'}]}>
+            <div style={containerStyle}>
                 <div style={styles.downBar}>
-                    <span style={styles.date}>{date.format('ll').split(',')[0]}</span>
-                    <span style={styles.remaining}>{remaining}</span>
+                    <span style={styles.date}>{ date.format('ll').split(',')[0] }</span>
+                    <span style={styles.remaining}>{ remaining }</span>
                 </div>
             </div>
         )
@@ -54,6 +59,10 @@ const styles = {
         whiteSpace: 'nowrap',
         color: '#AAA',
         transform: 'translateX(-50%)',
+    },
+    notActive: {
+        transform: 'scale(0.95)',
+        opacity: 0.3
     }
 };
 

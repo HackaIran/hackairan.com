@@ -1,14 +1,18 @@
 import React from 'react'
 import Radium from 'radium'
+import moment from 'moment'
 
 class TimelineBar extends React.Component {
     render() {
-        const left = 10;
+        const date = moment(1516051313547);
+        const diffWithNow = moment().diff(date, 'days');
+        const remaining = -diffWithNow + ' days to go';
+        const left = (-diffWithNow / 60 * 50) + 50;
         return (
             <div style={[styles.container, {left: left + '%'}]}>
                 <div style={styles.downBar}>
-                    <span style={styles.date}>Dec 20</span>
-                    <span style={styles.toGo}>5 Days to go</span>
+                    <span style={styles.date}>{date.format('ll').split(',')[0]}</span>
+                    <span style={styles.remaining}>{remaining}</span>
                 </div>
             </div>
         )
@@ -42,7 +46,7 @@ const styles = {
         whiteSpace: 'nowrap',
         transform: 'translateX(-50%)',
     },
-    toGo: {
+    remaining: {
         fontSize: 13,
         position: 'absolute',
         bottom: -50,

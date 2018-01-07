@@ -10,15 +10,7 @@ class UpComingEvents extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            selectedEvent: {
-                id: -1,
-                title: 'loading',
-                location: 'loading',
-                city: 'loading',
-                timestamp: Date.now() + 100000000,
-                description: 'loading',
-                registerLink: ''
-            },
+            selectedEvent: -1,
             events: [],
         };
     }
@@ -34,6 +26,7 @@ class UpComingEvents extends React.Component {
                 title: 'Hacka{Karaj} 3',
                 location: 'Startup House',
                 city: 'Karaj, Iran',
+                dateLabel: 'Dec 6',
                 timestamp: 1512551313547,
                 description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
                 registerLink: 'https://evand.com/startuphouse'
@@ -43,6 +36,7 @@ class UpComingEvents extends React.Component {
                 title: 'Hackademy',
                 location: 'Avatech',
                 city: 'Tehran, Iran',
+                dateLabel: 'Jan 16',
                 timestamp: 1517051313547,
                 description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ciure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
                 registerLink: 'https://evand.com/avatech'
@@ -52,12 +46,13 @@ class UpComingEvents extends React.Component {
                 title: 'Hacka{Karaj} 4',
                 location: 'Azad University Of Karaj',
                 city: 'Karaj, Iran',
+                dateLabel: 'Jan 27',
                 timestamp: 1516051313547,
                 description: 'Lorem ipsum dolor sit amet, cng elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
                 registerLink: 'https://evand.com/azad'
             }
         ];
-        this.setState({ events: events, selectedEvent: events[0] });
+        this.setState({ events: events, selectedEvent: 0 });
     }
 
     get bars () {
@@ -66,21 +61,47 @@ class UpComingEvents extends React.Component {
             bars.push(<TimelineBar
                 key={event.id}
                 timestamp={event.timestamp}
-                active={ this.state.selectedEvent.id === event.id }
+                active={ this.state.selectedEvent === event.id }
             />)
         }
         return bars;
     }
 
+    get eventList () {
+        const items = [];
+        for (let event of this.state.events) {
+            items.push(<li key={event.id} style={styles.eventItem}>
+                <h3 style={styles.eventItemTitle}>{ event.title }</h3>
+                <h4 style={styles.eventItemLocation}>{ event.location } / <b>{ event.city }</b></h4>
+                <time style={styles.eventItemDate}>{ event.dateLabel }</time>
+            </li>)
+        }
+        return items;
+    }
+
+    getEvent (id) {
+        return this.state.events[id] || {}
+    }
+
     render() {
-        const currentEvent = this.state.selectedEvent;
+        const currentEvent = Object.assign(
+            {
+                title: '-',
+                location: '-',
+                city: '-',
+                timestamp: '-',
+                description: '-',
+                registerLink: '-',
+            },
+            this.getEvent(this.state.selectedEvent)
+        );
         return (
             <div style={styles.container}>
                 <div style={styles.showBox}>
                     <div style={styles.selectedEvent}>
                         <h2 style={styles.eventTitle}>{ currentEvent.title } </h2>
                         <h3 style={styles.eventLocation}>{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
-                        <time style={styles.eventDate}>{ currentEvent.timestamp }</time>
+                        <time style={styles.eventDate}>{ currentEvent.dateLabel }</time>
                         <p style={styles.eventDescription}>{ currentEvent.description }</p>
                         <a style={styles.eventRegister} href={ currentEvent.registerLink } target="_blank">Register</a>
                     </div>
@@ -91,23 +112,7 @@ class UpComingEvents extends React.Component {
                 </div>
                 <aside style={styles.aside}>
                     <h2>upcoming events</h2>
-                    <ul style={styles.eventList}>
-                        <li key="item1" style={styles.eventItem}>
-                            <h3 style={styles.eventItemTitle}>HackaKaraj2</h3>
-                            <h4 style={styles.eventItemLocation}>Startup House / <b>Karaj, Iran</b></h4>
-                            <time style={styles.eventItemDate}>Dec 13</time>
-                        </li>
-                        <li key="item2" style={styles.eventItem}>
-                            <h3 style={styles.eventItemTitle}>HackaKaraj2</h3>
-                            <h4 style={styles.eventItemLocation}>Startup House / <b>Karaj, Iran</b></h4>
-                            <time style={styles.eventItemDate}>Dec 13</time>
-                        </li>
-                        <li key="item3" style={styles.eventItem}>
-                            <h3 style={styles.eventItemTitle}>HackaKaraj2</h3>
-                            <h4 style={styles.eventItemLocation}>Startup House / <b>Karaj, Iran</b></h4>
-                            <time style={styles.eventItemDate}>Dec 13</time>
-                        </li>
-                    </ul>
+                    <ul style={styles.eventList}>{ this.eventList }</ul>
                 </aside>
             </div>
         )

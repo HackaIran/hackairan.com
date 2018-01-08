@@ -67,10 +67,15 @@ class UpComingEvents extends React.Component {
         return bars;
     }
 
+    selectEvent (id) {
+        this.setState({ selectedEvent: id })
+    }
+
     get eventList () {
         const items = [];
         for (let event of this.state.events) {
-            items.push(<li key={event.id} style={styles.eventItem}>
+            const id = event.id;
+            items.push(<li key={id} style={styles.eventItem} onClick={() => this.selectEvent(id)}>
                 <h3 style={styles.eventItemTitle}>{ event.title }</h3>
                 <h4 style={styles.eventItemLocation}>{ event.location } / <b>{ event.city }</b></h4>
                 <time style={styles.eventItemDate}>{ event.dateLabel }</time>
@@ -97,7 +102,7 @@ class UpComingEvents extends React.Component {
         );
         return (
             <div style={styles.container}>
-                <div style={styles.showBox}>
+                <section style={styles.showBox}>
                     <div style={styles.selectedEvent}>
                         <h2 style={styles.eventTitle}>{ currentEvent.title } </h2>
                         <h3 style={styles.eventLocation}>{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
@@ -109,7 +114,7 @@ class UpComingEvents extends React.Component {
                         { this.bars }
                         <div className="now" style={styles.now} />
                     </div>
-                </div>
+                </section>
                 <aside style={styles.aside}>
                     <h2>upcoming events</h2>
                     <ul style={styles.eventList}>{ this.eventList }</ul>

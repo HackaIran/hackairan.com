@@ -59,8 +59,10 @@ class UpComingEvents extends React.Component {
     get bars () {
         const bars = [];
         for (let event of this.state.events) {
+            const id = event.id;
             bars.push(<TimelineBar
-                key={event.id}
+                key={id}
+                onClick={() => this.selectEvent(id)}
                 timestamp={event.timestamp}
                 active={ this.state.selectedEvent === event.id }
             />)

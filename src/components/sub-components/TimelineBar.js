@@ -14,7 +14,7 @@ class TimelineBar extends React.Component {
         const containerStyle = [styles.container, {left: left + '%'}];
         if (!this.props.active) containerStyle.push(styles.notActive);
         return (
-            <div style={containerStyle}>
+            <div style={containerStyle} onClick={() => this.props.onClick()}>
                 <div style={styles.downBar}>
                     <span style={styles.date}>{ date.format('ll').split(',')[0] }</span>
                     <span style={styles.remaining}>{ remaining }</span>
@@ -33,6 +33,7 @@ const styles = {
         position: 'absolute',
         transitionDuration: '0.3s',
         bottom: -20,
+        pointerEvents: 'none'
     },
     downBar: {
         position: 'absolute',
@@ -63,7 +64,14 @@ const styles = {
     },
     notActive: {
         transform: 'scale(0.95)',
-        opacity: 0.3
+        opacity: 0.3,
+        cursor: 'pointer',
+        pointerEvents: 'auto',
+
+        ':hover': {
+            transform: 'scale(0.96)',
+            opacity: 0.45
+        }
     }
 };
 

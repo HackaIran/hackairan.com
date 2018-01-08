@@ -31,6 +31,7 @@ const styles = {
         transform: 'translateX(-50%)',
         background: 'linear-gradient(transparent, #DDD)',
         position: 'absolute',
+        transitionDuration: '0.3s',
         bottom: -20,
     },
     downBar: {

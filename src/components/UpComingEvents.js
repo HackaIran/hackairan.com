@@ -11,6 +11,7 @@ class UpComingEvents extends React.Component {
         super(props);
         this.state = {
             selectedEvent: -1,
+            waiting: true,
             events: [],
         };
     }
@@ -52,7 +53,7 @@ class UpComingEvents extends React.Component {
                 registerLink: 'https://evand.com/azad'
             }
         ];
-        this.setState({ events: events, selectedEvent: 0 });
+        this.setState({ events: events, waiting: false, selectedEvent: 0 });
     }
 
     get bars () {
@@ -68,7 +69,10 @@ class UpComingEvents extends React.Component {
     }
 
     selectEvent (id) {
-        this.setState({ selectedEvent: id })
+        this.setState({ waiting: true });
+        setTimeout(() => {
+            this.setState({ selectedEvent: id, waiting: false })
+        }, 500)
     }
 
     get eventList () {
@@ -100,10 +104,14 @@ class UpComingEvents extends React.Component {
             },
             this.getEvent(this.state.selectedEvent)
         );
+        const additionalStyleForSelectedEvent = this.state.waiting ? {
+            opacity: 0,
+            transform: 'scale(1.03) translate(-10px, -10px)'
+        } : {};
         return (
             <div style={styles.container}>
                 <section style={styles.showBox}>
-                    <div style={styles.selectedEvent}>
+                    <div style={[styles.selectedEvent, additionalStyleForSelectedEvent]}>
                         <h2 style={styles.eventTitle}>{ currentEvent.title } </h2>
                         <h3 style={styles.eventLocation}>{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
                         <time style={styles.eventDate}>{ currentEvent.dateLabel }</time>
@@ -141,7 +149,8 @@ const styles = {
     selectedEvent: {
         flexGrow: 1,
         padding: '40px 60px',
-        position: 'relative'
+        position: 'relative',
+        transitionDuration: '0.3s'
     },
     eventTitle: {
         fontSize: 35,

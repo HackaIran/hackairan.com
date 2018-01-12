@@ -1,5 +1,6 @@
 import React from 'react'
 import Radium from 'radium'
+import Color from 'color'
 
 import colors from '../shared/colors'
 
@@ -27,7 +28,7 @@ class UpComingEvents extends React.Component {
                 title: 'Hacka{Karaj} 3',
                 location: 'Startup House',
                 city: 'Karaj, Iran',
-                dateLabel: 'Dec 6',
+                dateLabel: 'Dec 6 - 25 Aban',
                 timestamp: 1512551313547,
                 description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
                 registerLink: 'https://evand.com/startuphouse'
@@ -71,6 +72,7 @@ class UpComingEvents extends React.Component {
     }
 
     selectEvent (id) {
+        if (id === this.state.selectedEvent) return;
         this.setState({ waiting: true });
         setTimeout(() => {
             this.setState({ selectedEvent: id, waiting: false })
@@ -81,8 +83,12 @@ class UpComingEvents extends React.Component {
         const items = [];
         for (let event of this.state.events) {
             const id = event.id;
+            const titleStyle = [
+                styles.eventItemTitle,
+                (id === this.state.selectedEvent) ? styles.eventItemTitleSelected : {}
+            ];
             items.push(<li key={id} style={styles.eventItem} onClick={() => this.selectEvent(id)}>
-                <h3 style={styles.eventItemTitle}>{ event.title }</h3>
+                <h3 key={'title' + id} style={titleStyle}>{ event.title }</h3>
                 <h4 style={styles.eventItemLocation}>{ event.location } / <b>{ event.city }</b></h4>
                 <time style={styles.eventItemDate}>{ event.dateLabel }</time>
             </li>)
@@ -230,9 +236,13 @@ const styles = {
         }
     },
     eventItemTitle: {
-        color: colors.highlight,
+        color: Color(colors.highlight).desaturate(0.95).string(),
         marginTop: 15,
         userSelect: 'none',
+    },
+    eventItemTitleSelected: {
+        color: colors.highlight,
+        pointerEvents: 'none'
     },
     eventItemLocation: {
         fontWeight: 100,

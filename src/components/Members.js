@@ -4,10 +4,49 @@ import Radium from 'radium'
 import colors from '../shared/colors'
 
 class Members extends React.Component {
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            members: [{
+                username: 'ali',
+                name: 'Alireza Sheikholmolouki',
+                description: 'Co-Founder & Tech Manager'
+            }, {
+                username: 'ali',
+                name: 'Shayan Sabery',
+                description: 'Co-Founder & Event Manager'
+            }, {
+                username: 'ali',
+                name: 'Ali Shahabbasi',
+                description: 'Everything Developer and IT Consults'
+            }]
+        }
+    }
+
+    getMember (member) {
+        return (
+            <div style={styles.member}>
+                <div style={ styles.avatarContainer }>
+                    <video src={`./assets/avatars/${ member.username }.mp4`} autoPlay loop style={ styles.avatar } />
+                </div>
+                <h3 style={styles.name}>{ member.name }</h3>
+                <p style={styles.description}>{ member.description }</p>
+            </div>
+        )
+    }
+
+    get members () {
+        const members = [];
+        for (let member of this.state.members) members.push(this.getMember(member));
+        return members;
+    }
+
     render() {
         return (
             <div style={styles.container}>
                 <h2 style={styles.title}>People who truly believe in <strong style={styles.strong}>Hacka</strong></h2>
+                <div style={styles.membersContainer}>{ this.members }</div>
             </div>
         )
     }
@@ -22,10 +61,43 @@ const styles = {
     },
     title: {
         color: 'white',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: 25
     },
     strong: {
-        color: colors.highlight
+        color: colors.highlight,
+    },
+    avatarContainer: {
+        width: 180,
+        height: 180,
+        borderRadius: '50%',
+        overflow: 'hidden',
+        position: 'relative',
+        margin: 'auto',
+    },
+    avatar: {
+        width: '100%',
+        position: 'absolute',
+        top: 0,
+        left: 0
+    },
+    membersContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginTop: 30
+    },
+    member: {
+        color: 'white',
+        margin: 20,
+        width: 200,
+        textAlign: 'center'
+    },
+    name: {
+        marginTop: 20
+    },
+    description: {
+        marginTop: 10
     }
 };
 

@@ -144,7 +144,7 @@ const styles = {
     container: {
         display: 'flex',
         minHeight: 450,
-        marginTop: 50,
+        marginTop: 0,
         marginBottom: 100,
         flexDirection: 'row',
         color: 'white'

@@ -5,6 +5,7 @@ import color from 'color'
 import Header from './Header'
 import Events from './Events'
 import UpComingEvents from './UpComingEvents'
+import Members from './Members'
 
 class App extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
                 <Header height={500} />
                 <Events />
                 <UpComingEvents />
+                <Members />
             </div>
         )
     }

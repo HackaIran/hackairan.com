@@ -5,6 +5,7 @@ import Header from './Header'
 import Events from './Events'
 import UpComingEvents from './UpComingEvents'
 import Members from './Members'
+import Sponsors from './Sponsors'
 
 class App extends React.Component {
     render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
                 <Events />
                 <UpComingEvents />
                 <Members />
+                <Sponsors />
             </div>
         )
     }

@@ -24,9 +24,10 @@ class Members extends React.Component {
         }
     }
 
-    getMember (member) {
+    getMember (i) {
+        const member = this.state.members[i];
         return (
-            <div style={styles.member}>
+            <div key={i} style={styles.member}>
                 <div style={ styles.avatarContainer }>
                     <video src={`./assets/avatars/${ member.username }.mp4`} autoPlay loop style={ styles.avatar } />
                 </div>
@@ -38,7 +39,7 @@ class Members extends React.Component {
 
     get members () {
         const members = [];
-        for (let member of this.state.members) members.push(this.getMember(member));
+        for (let i = 0; i < this.state.members.length; i++) members.push(this.getMember(i));
         return members;
     }
 

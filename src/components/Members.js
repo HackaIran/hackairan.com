@@ -94,7 +94,7 @@ const styles = {
         textAlign: 'center'
     },
     name: {
-        marginTop: 20
+        marginTop: 5
     },
     description: {
         marginTop: 10

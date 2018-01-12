@@ -1,6 +1,5 @@
 import React from 'react'
 import Radium from 'radium'
-import color from 'color'
 
 import Header from './Header'
 import Events from './Events'

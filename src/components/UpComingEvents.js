@@ -29,7 +29,7 @@ class UpComingEvents extends React.Component {
                 location: 'Startup House',
                 city: 'Karaj, Iran',
                 dateLabel: 'Dec 6 - 25 Aban',
-                timestamp: 1512551313547,
+                timestamp: 1518551313247,
                 description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
                 registerLink: 'https://evand.com/startuphouse'
             },
@@ -39,7 +39,7 @@ class UpComingEvents extends React.Component {
                 location: 'Avatech',
                 city: 'Tehran, Iran',
                 dateLabel: 'Jan 16',
-                timestamp: 1517051313547,
+                timestamp: 1515551313247,
                 description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ciure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
                 registerLink: 'https://evand.com/avatech'
             },
@@ -49,12 +49,18 @@ class UpComingEvents extends React.Component {
                 location: 'Azad University Of Karaj',
                 city: 'Karaj, Iran',
                 dateLabel: 'Jan 27',
-                timestamp: 1516051313547,
+                timestamp: 1516551313247,
                 description: 'Lorem ipsum dolor sit amet, cng elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
                 registerLink: 'https://evand.com/azad'
             }
         ];
-        this.setState({ events: events, waiting: false, selectedEvent: 0 });
+        events.sort((a, b) => a.timestamp < b.timestamp ? -1 : 1);
+        let selectedEvent = events.length - 1;
+        for (let event of events) if (event.timestamp >= Date.now()) {
+            selectedEvent = event.id;
+            break;
+        }
+        this.setState({ events: events, waiting: false, selectedEvent: selectedEvent });
     }
 
     get bars () {
@@ -82,6 +88,9 @@ class UpComingEvents extends React.Component {
     get eventList () {
         const items = [];
         for (let event of this.state.events) {
+
+            if (event.timestamp < Date.now()) continue;
+
             const id = event.id;
             const titleStyle = [
                 styles.eventItemTitle,
@@ -97,7 +106,8 @@ class UpComingEvents extends React.Component {
     }
 
     getEvent (id) {
-        return this.state.events[id] || {}
+        for (let event of this.state.events) if (event.id === id) return event;
+        return {};
     }
 
     render() {

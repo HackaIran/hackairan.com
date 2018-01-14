@@ -42,6 +42,7 @@
     transform: translateX(-50%);
     height: 80%;
     width: 2px;
+    pointer-events: none;
 }
 .timeline .now:before {
     content: ' ';

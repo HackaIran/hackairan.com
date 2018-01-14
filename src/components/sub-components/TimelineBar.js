@@ -19,6 +19,7 @@ class TimelineBar extends React.Component {
                     <span style={styles.date}>{ date.format('ll').split(',')[0] }</span>
                     <span style={styles.remaining}>{ remaining }</span>
                 </div>
+                <div style={styles.clickArea} />
             </div>
         )
     }
@@ -61,6 +62,14 @@ const styles = {
         whiteSpace: 'nowrap',
         color: '#AAA',
         transform: 'translateX(-50%)',
+    },
+    clickArea: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: 45,
+        height: '100%',
+        transform: 'translateX(-50%)'
     },
     notActive: {
         transform: 'scale(0.95)',

@@ -111,21 +111,27 @@ class UpComingEvents extends React.Component {
     }
 
     render() {
-        const currentEvent = Object.assign(
-            {
+        const currentEvent = Object.assign({
                 title: '-',
                 location: '-',
                 city: '-',
                 timestamp: '-',
                 description: '-',
                 registerLink: '-',
-            },
-            this.getEvent(this.state.selectedEvent)
-        );
+            }, this.getEvent(this.state.selectedEvent));
         const additionalStyleForSelectedEvent = this.state.waiting ? {
             opacity: 0,
             transform: 'scale(1.03) translate(-10px, -10px)'
         } : {};
+        const eventIsActive = currentEvent.timestamp >= Date.now();
+        const finalRegisterButtonStyle = [
+            styles.eventRegister, eventIsActive ? {} : {
+                background: 'rgb(122, 120, 116)',
+                color: '#474747',
+                pointerEvents: 'none'
+            }
+        ];
+
         return (
             <div style={styles.container}>
                 <section style={styles.showBox}>
@@ -134,7 +140,9 @@ class UpComingEvents extends React.Component {
                         <h3 style={styles.eventLocation}>{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
                         <time style={styles.eventDate}>{ currentEvent.dateLabel }</time>
                         <p style={styles.eventDescription}>{ currentEvent.description }</p>
-                        <a style={styles.eventRegister} href={ currentEvent.registerLink } target="_blank">Register</a>
+                        <a style={finalRegisterButtonStyle} href={ currentEvent.registerLink } target="_blank">
+                            {eventIsActive ? 'Register' : 'Passed!'}
+                        </a>
                     </div>
                     <div className="timeline" style={styles.timeline}>
                         { this.bars }

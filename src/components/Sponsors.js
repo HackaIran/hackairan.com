@@ -13,17 +13,7 @@ class Sponsors extends React.Component {
                     name: 'Reyhoon',
                     image: 'reyhoon.png',
                     link: 'https://reyhoon.com/'
-                },
-                {
-                    name: 'Google',
-                    image: 'google.svg',
-                    link: 'https://google.com/'
-                },
-                {
-                    name: 'Tesla Motors',
-                    image: 'tesla.png',
-                    link: 'https://tesla.com/'
-                },
+                }
             ]
         };
     }

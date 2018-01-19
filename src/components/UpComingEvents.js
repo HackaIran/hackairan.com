@@ -25,33 +25,23 @@ class UpComingEvents extends React.Component {
         const events = [
             {
                 id: 0,
-                title: 'Hacka{Karaj} 3',
-                location: 'Startup House',
+                title: 'MiniHacka 1',
+                location: 'Payame Noor University',
                 city: 'Karaj, Iran',
-                dateLabel: 'Dec 6 - 25 Aban',
-                timestamp: 1518551313247,
-                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
-                registerLink: 'https://evand.com/startuphouse'
+                dateLabel: 'Nov 26 - 05 Azar',
+                timestamp: 1511708400000,
+                description: 'MiniHacka is a smaller-sized Hacka event that is held for the purpose of preparation and networking for the original match.',
+                registerLink: 'https://evand.com/events/minihackakaraj1'
             },
             {
                 id: 1,
-                title: 'Hackademy',
-                location: 'Avatech',
-                city: 'Tehran, Iran',
-                dateLabel: 'Jan 16',
-                timestamp: 1515551313247,
-                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ciure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
-                registerLink: 'https://evand.com/avatech'
-            },
-            {
-                id: 2,
-                title: 'Hacka{Karaj} 4',
-                location: 'Azad University Of Karaj',
+                title: 'Hacka{Karaj} 3',
+                location: 'Startup House',
                 city: 'Karaj, Iran',
-                dateLabel: 'Jan 27',
-                timestamp: 1516551313247,
-                description: 'Lorem ipsum dolor sit amet, cng elit. Culpa dolorem ea, in iure molestias reprehenderit tempora. Architecto asperiores at aut, cumque distinctio dolor fugit labore, nobis placeat similique velit voluptas.',
-                registerLink: 'https://evand.com/azad'
+                dateLabel: 'Feb 02 - 13 Bahman',
+                timestamp: 1517567400000,
+                description: 'In previous version of Hacka(in Karaj) the competitors observed some technical changes and the arrangements for Hacademy were made. In current version, another part of Hacka starts growing: Communication, the part which we created Hacka for.',
+                registerLink: 'https://evand.com/hackakaraj'
             }
         ];
         events.sort((a, b) => a.timestamp < b.timestamp ? -1 : 1);

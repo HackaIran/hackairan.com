@@ -9,17 +9,25 @@ class Members extends React.Component {
         super(props);
         this.state = {
             members: [{
-                username: 'ali',
+                username: 'alirezasheikholmolouki',
                 name: 'Alireza Sheikholmolouki',
                 description: 'Co-Founder & Tech Manager'
             }, {
-                username: 'ali',
+                username: 'shayansabery',
                 name: 'Shayan Sabery',
                 description: 'Co-Founder & Event Manager'
             }, {
-                username: 'ali',
+                username: 'alishahabbasi',
                 name: 'Ali Shahabbasi',
                 description: 'Everything Developer and IT Consults'
+            }, {
+                username: 'pouya',
+                name: 'Pouya MozzafarMagham',
+                description: 'Everything Developer and IT Consults'
+            }, {
+                username: 'Pouya',
+                name: 'Pouya Sedighi',
+                description: 'Social Media Manager'
             }]
         }
     }

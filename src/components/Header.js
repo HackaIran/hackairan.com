@@ -50,7 +50,7 @@ const styles = {
     wrapper: {
         marginRight: 'auto',
         marginLeft: 'auto',
-        width: 500,
+        width: 550,
         textAlign: 'center',
         position: 'absolute',
         top: '50%',

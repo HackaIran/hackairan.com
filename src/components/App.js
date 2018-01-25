@@ -1,5 +1,5 @@
 import React from 'react'
-import Radium from 'radium'
+import Radium,{StyleRoot} from 'radium'
 
 import Header from './Header'
 import Events from './Events'
@@ -12,10 +12,15 @@ class App extends React.Component {
         return (
             <div style={styles.app}>
                 <Header height={500} />
+                <StyleRoot>
+
                 <Events />
+                
+                
                 <UpComingEvents />
                 <Members />
                 <Sponsors />
+                </StyleRoot>
             </div>
         )
     }

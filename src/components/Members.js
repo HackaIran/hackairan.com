@@ -19,13 +19,13 @@ class Members extends React.Component {
             }, {
                 username: 'alishahabbasi',
                 name: 'Ali Shahabbasi',
-                description: 'Everything Developer and IT Consults'
+                description: 'Developer and IT Consults'
             }, {
-                username: 'pouya',
-                name: 'Pouya MozzafarMagham',
-                description: 'Everything Developer and IT Consults'
+                username: 'pouyamozaffarmagham',
+                name: 'Pouya MozaffarMagham',
+                description: 'Developer and IT Consults'
             }, {
-                username: 'Pouya',
+                username: 'pouyasedighi',
                 name: 'Pouya Sedighi',
                 description: 'Social Media Manager'
             }]
@@ -37,7 +37,7 @@ class Members extends React.Component {
         return (
             <div key={i} style={styles.member}>
                 <div style={ styles.avatarContainer }>
-                    <video src={`./assets/avatars/${ member.username }.mp4`} autoPlay loop style={ styles.avatar } />
+                    <img src={`./assets/avatars/${ member.username }.jpg`} style={ styles.avatar } />
                 </div>
                 <h3 style={styles.name}>{ member.name }</h3>
                 <p style={styles.description}>{ member.description }</p>
@@ -94,13 +94,24 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 30
+        marginTop: 30,
+
+        '@media only screen and (max-width: 1200px)':{
+            display: "block",
+            textAlign: 'center'
+        }
+
     },
     member: {
         color: 'white',
         margin: 20,
         width: 200,
-        textAlign: 'center'
+        textAlign: 'center',
+
+        '@media only screen and (max-width: 1200px)':{
+            display: "inline-block"
+        }
+
     },
     name: {
         marginTop: 5

@@ -13,6 +13,16 @@ class Sponsors extends React.Component {
                     name: 'Reyhoon',
                     image: 'reyhoon.png',
                     link: 'https://reyhoon.com/'
+                },
+                {
+                    name: 'Pardis',
+                    image: 'pardis.png',
+                    link: 'http://pardis.ir/'
+                },
+                {
+                    name: 'Tab30',
+                    image: 'tab30.png',
+                    link: 'https://tap30.ir/'
                 }
             ]
         };
@@ -64,6 +74,12 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 20,
+
+        '@media only screen and (max-width: 700px)':{
+            display:"block",
+            textAlign:"center"
+        }
+
     },
     sponsor: {
         padding: 20,
@@ -77,7 +93,12 @@ const styles = {
 
         ':active': {
             opacity: 0.4,
+        },
+
+        '@media only screen and (max-width: 700px)':{
+            display:"inline-block"
         }
+
     },
     image: {
         width: 100,

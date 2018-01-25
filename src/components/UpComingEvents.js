@@ -36,7 +36,7 @@ class UpComingEvents extends React.Component {
             {
                 id: 1,
                 title: 'Hacka{Karaj} 3',
-                location: 'Startup House',
+                location: 'Pardis',
                 city: 'Karaj, Iran',
                 dateLabel: 'Feb 02 - 13 Bahman',
                 timestamp: 1517567400000,
@@ -188,7 +188,12 @@ const styles = {
     eventDescription: {
         fontSize: 16,
         fontWeight: 100,
-        lineHeight: '25px'
+        lineHeight: '25px',
+
+        '@media only screen and (max-width: 600px)':{
+            display:"none"
+        }
+
     },
     eventRegister: {
         background: colors.highlight,
@@ -203,7 +208,12 @@ const styles = {
 
         ':hover': {
             opacity: 0.9,
+        },
+
+        '@media only screen and (max-width: 600px)':{
+            top: "auto"
         }
+
     },
     timeline: {
         background: 'linear-gradient(transparent, rgba(255, 255, 255, 0.2)',
@@ -220,7 +230,12 @@ const styles = {
         padding: 40,
         minWidth: 330,
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+
+        '@media only screen and (max-width: 1050px)':{
+            display:"none"
+        }
+
     },
     eventList: {
         listStyle: 'none',

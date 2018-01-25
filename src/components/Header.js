@@ -8,7 +8,7 @@ class Header extends React.Component {
     render() {
         return (
             <header style={[styles.container, { height: this.props.height }]}>
-                <video src="./assets/videos/header.mp4" autoPlay loop={true} style={styles.video} />
+                <video src="https://as1.cdn.asset.aparat.com/aparat-video/b906acebfc9fb2bdc122c4fe4d4c67079318264-144p__35098.mp4" autoPlay loop={true} style={styles.video} />
                 <div style={styles.gradient} />
                 <div style={styles.wrapper}>
                     <img style={styles.logo} src="./assets/images/hacka_white.png" alt="Hacka{Iran}"/>
@@ -50,7 +50,8 @@ const styles = {
     wrapper: {
         marginRight: 'auto',
         marginLeft: 'auto',
-        width: 550,
+        width: "100%",
+        maxWidth: 550,
         textAlign: 'center',
         position: 'absolute',
         top: '50%',

@@ -35,7 +35,14 @@ const styles = {
         ':active': {
             transform: 'scale(0.98)',
             opacity: 0.6
+        },
+
+        '@media only screen and (max-width: 515px)':{
+            display: "block",
+            margin: "auto",
+            marginTop:5
         }
+
     },
     image: {
         height: 110,

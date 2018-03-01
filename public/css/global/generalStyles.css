@@ -1,0 +1,31 @@
+﻿/*colors*/
+.primaryColor {
+    color: #4285f4!important;
+}
+.primaryBackColor {
+    background-color: #4285f4!important;
+}
+.colorSet1 {
+    color: #ff5722!important;
+}
+.backColorSet1 {
+    background-color: #ff5722!important;
+}
+.colorSet2 {
+    color: #398439!important;
+}
+.backColorSet2 {
+    background-color: #398439!important;
+}
+.colorSet3 {
+    color: #03a9f4!important;
+}
+.backColorSet3 {
+    background-color: #03a9f4!important;
+}
+.colorSet4 {
+    color: #ffc107!important;
+}
+.backColorSet4 {
+    background-color: #ffc107!important;
+}

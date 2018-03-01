@@ -1,0 +1,21 @@
+@media only screen and (max-width: 600px) {
+    #eventDescriptionCont > p {
+        display: none;
+    }
+
+    #eventBtn {
+        top: auto;
+        bottom: 0px;
+    }
+
+    #headerIntro > p {
+        padding: 0px 5px 0px 5px;
+    }
+
+}
+
+@media only screen and (max-width: 1050px) {
+    #eventSection > div > aside {
+        display: none;
+    }
+}

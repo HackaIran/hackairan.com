@@ -26,7 +26,7 @@ class HomeController extends Controller
 
     public function getPartial($partialName){
 
-        if(array_search($partialName,$this->allowedPartials)){
+        if(array_search($partialName,$this->allowedPartials) !== false){
 
             return View("public.partials.".$partialName);
 

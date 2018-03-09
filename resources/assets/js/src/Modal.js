@@ -23,33 +23,33 @@ class Modal{
 
         // wrapper.style.overflow = "hidden";
 
-        wrapper.style.transitionDuration = "0.5s";
+        modalImage.src = hackaSection.querySelector("img").src;
 
-        wrapper.style.filter = "blur(15px)";
+        modalHeaderText.innerHTML = hackaSection.querySelector("h2").innerHTML;
 
-        modal.style.visibility = "visible";
+        this.triggerLoadingEvent();
 
-        modal.style.opacity = "1";
+        this.getContent(sectionName).then((data)=>{
 
+            this.appendContent(data);
 
+            this.triggerFinishLoadingEvent();
+
+        })
 
         setTimeout(()=>{
 
+            // Showing modal
+
+            wrapper.style.transitionDuration = "0.5s";
+
+            wrapper.style.filter = "blur(15px)";
+
+            modal.style.visibility = "visible";
+
+            modal.style.opacity = "1";
+
             modal.querySelector(".modalCont").style.transform = "scale(1)";
-
-            modalImage.src = hackaSection.querySelector("img").src;
-
-            modalHeaderText.innerHTML = hackaSection.querySelector("h2").innerHTML;
-
-            this.triggerLoadingEvent();
-
-            this.getContent(sectionName).then((data)=>{
-                console.log(data)
-                this.appendContent(data);
-
-                this.triggerFinishLoadingEvent();
-            })
-
 
 
         },300)

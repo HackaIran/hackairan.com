@@ -25,6 +25,7 @@ class Events extends Migration
             $table->string("time");
             $table->string("to","5");
             $table->string("from","5");
+            $table->integer("type");
             $table->timestamps();
 
         });

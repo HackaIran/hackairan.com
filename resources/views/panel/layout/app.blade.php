@@ -126,6 +126,24 @@
                             </div>
                         </a>
                     </li>
+                    <li class="pmd-ripple-effect" data-collapsable="true" data-href="HackaPartsCollapse">
+                        <a>
+                            <i class="material-icons">folder</i>
+                            <div>
+                                <span>بخش های هاکا</span>
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pmd-ripple-effect" data-collapsable="true" data-href="GalleriesCollapse">
+                        <a>
+                            <i class="material-icons">folder</i>
+                            <div>
+                                <span>گالری ها</span>
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!-- slides -->
@@ -208,6 +226,64 @@
                     </li>
                     <li class="pmd-ripple-effect">
                         <a href="{{route('manageSponsors')}}">
+                            <i class="material-icons">list</i>
+                            <div>
+                                <span>مدیریت</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sideBarCollapseSlide" data-aside-slide="true" data-id="HackaPartsCollapse">
+                <ul>
+                    <li class="backWardSlide pmd-ripple-effect">
+                        <a>
+                            <div>
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>بخش های هاکا</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pmd-ripple-effect">
+                        <a href="{{route('addHackaPart')}}">
+                            <i class="material-icons">add</i>
+                            <div>
+                                <span>افزودن</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pmd-ripple-effect">
+                        <a href="{{route('manageHackaParts')}}">
+                            <i class="material-icons">list</i>
+                            <div>
+                                <span>مدیریت</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sideBarCollapseSlide" data-aside-slide="true" data-id="GalleriesCollapse">
+                <ul>
+                    <li class="backWardSlide pmd-ripple-effect">
+                        <a>
+                            <div>
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>گالری ها</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pmd-ripple-effect">
+                        <a href="{{route('addGallery')}}">
+                            <i class="material-icons">add</i>
+                            <div>
+                                <span>افزودن</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pmd-ripple-effect">
+                        <a href="{{route('manageGalleries')}}">
                             <i class="material-icons">list</i>
                             <div>
                                 <span>مدیریت</span>

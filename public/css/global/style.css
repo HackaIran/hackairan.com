@@ -157,7 +157,13 @@ body{
     transition-duration: 0.2s;
 }
 
-#hackaSections > div > img {
+#hackaSections > div>a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+
+#hackaSections > div>a > img {
     height: 110px;
     position: absolute;
     top: 50%;
@@ -165,10 +171,11 @@ body{
     transform: translate(-50%, -50%) translateY(-20px);
 }
 
-#hackaSections > div > h2 {
+#hackaSections > div>a > h2 {
     width: 100%;
     position: absolute;
     top: 50%;
+    color:white;
     left: 50%;
     transform: translate(-50%, -50%) translateY(70px);
     user-select: none;
@@ -542,6 +549,113 @@ body{
     text-shadow: 0 0 20px #333;
 }
 
+/* Gallery Section */
+
+#galleryCont{
+    width: 100%;
+    height: 300px;
+    bcakground-color:red;
+    overflow: hidden;
+    position: relative;
+    margin-top:20px;
+}
+
+#galleryImagesCont{
+    min-width:100%;
+    display: flex;
+    direction: rtl;
+    height: 300px;
+    transition-duration: 0.5s;
+}
+.galleryImage{
+    height: 300px;
+    width: auto;
+    float: right;
+}
+.galleryImage>img{
+    height: 300px;
+    user-select: none;
+}
+
+#ltArrow{
+    left:0px;
+    background: linear-gradient(to right, black , transparent);
+}
+#rtArrow{
+    right:0px;
+    background: linear-gradient(to left, black , transparent);
+    display: none;
+}
+
+#ltArrow:hover{
+    transition-duration: 0.5s;
+    width:200px;
+}
+
+#rtArrow:hover{
+    transition-duration: 0.5s;
+    width:200px;
+}
+
+#ltArrow:hover>i,#rtArrow:hover>i{
+    opacity:1;
+    transition-duration: 0.5s;
+}
+
+
+.arrow-right,.arrow-left{
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    opacity:0.4;
+    margin:auto;
+    height:0px;
+    width:0px;
+    user-select:none;
+    transition-duration: 0.5s;
+}
+
+.arrow-right:after,
+.arrow-right:before,
+.arrow-left:after,
+.arrow-left:before{
+    content: ' ';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    border-radius: 10px;
+    background: white;
+}
+
+.arrow-right:after {
+    transform: translate(-50%, -50%) rotate(45deg) translateX(-50%) translateX(1px);
+}
+
+.arrow-right:before {
+    transform: translate(-50%, -50%) rotate(135deg) translateX(50%) translateX(-1px);
+}
+
+.arrow-left:after {
+    transform: translate(-50%, -50%) rotate(135deg) translateX(-50%) translateX(1px);
+}
+
+.arrow-left:before {
+    transform: translate(-50%, -50%) rotate(45deg) translateX(50%) translateX(-1px);
+}
+
+#rtArrow,#ltArrow{
+    width:80px;
+    height:100%;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    z-index: 5;
+}
+
 /*progress bar*/
 
 #nprogress {
@@ -716,4 +830,32 @@ body{
         stroke-dasharray: 1 210.48670779px;
         stroke-dashoffset: -151.55042961px
     }
+}
+
+/* Parts for hackaparts */
+
+#headerIntro.hackaPart{
+    top:30px;
+    left:0px;
+    right:0px;
+    margin:auto;
+    transform: none;
+}
+
+#headerIntro.hackaPart > h1{
+    margin-top: 50px;
+    margin-bottom:50px;
+    font-size:60px;
+}
+
+#mainHeader > img {
+    min-width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+#headerIntro.hackaPart > img {
+    width: 90px!important;
+    user-select: none;
+    pointer-events: none;
 }

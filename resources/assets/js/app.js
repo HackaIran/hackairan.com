@@ -2,19 +2,20 @@ const TimeLine = require("./src/TimeLine");
 
 const Loading = require("./src/Loading");
 
-const Modal = require("./src/Modal")
+const GallerySlide = require("./src/GallerySlider");
 
 const loading = new Loading();
 
-const modal = new Modal();
+const gallerySlider = new GallerySlide();
 
 document.addEventListener("DOMContentLoaded", () => {
 
     //Let's Get The Events
 
-    axios.get("api/index/getTimeLine").then((data)=>{
+    axios.get("api/index/getTimeLine/"+window.type).then((data)=>{
         const timeline = new TimeLine(data.data);
     });
+
 });
 
 document.addEventListener("app:load",function(){
@@ -24,3 +25,11 @@ document.addEventListener("app:load",function(){
 document.addEventListener("app:loaded",function(){
     loading.hideLoading();
 });
+
+// let's show loading untill page is fully loaded
+
+loading.showLoading();
+
+window.onload = ()=>{
+    loading.hideLoading();
+}

@@ -20,6 +20,10 @@ class TimeLine {
 
         this.initialEvents();
 
+        if(this.bars.length == 0){// if there is no events
+            return;
+        }
+
         if(this.bars.length - this.inactives == 0){// all events are passed
             this.showEvent(this.inactives-1);//showing the nearest past event
         }else{

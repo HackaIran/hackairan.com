@@ -55,6 +55,7 @@
                     '_token': '{{csrf_token()}}',
                     'id': id,
                     'title': $('#title').val(),
+                    "type":$("#part").val(),
                     'shortDesc': $('#shortDesc').val(),
                     'fullDesc': CKEDITOR.instances.fullDesc.getData(),
                     'registerLink': $('#registerLink').val(),
@@ -113,6 +114,20 @@
                         عنوان رویداد
                     </label>
                     <input value="{{$data->title}}" data-required="required" id="title" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                <div class="form-group pmd-textfield">
+                    <label class="control-label">
+                        بخش رویداد
+                    </label>
+                    <select id="part" required="required" class="form-control">
+                        @foreach($parts as $part)
+                            <option @if($part->id == $data->type) selected @endif value="{{$part->id}}">
+                                {{$part->name}}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
         </div>

@@ -17,14 +17,10 @@ Route::prefix("index")->group(function(){
 
     // Events
 
-    Route::get("/getUpComingEvents","EventController@getUpComingEvents");
+    Route::get("/getUpComingEvents/{id}","EventController@getUpComingEvents")->where(["id"=>"[0-9]+"]);;
 
-    Route::get("/getTimeLine","EventController@getTimeLine");
+    Route::get("/getTimeLine/{id}","EventController@getTimeLine")->where(["id"=>"[0-9]+"]);
 
     Route::get("/getEventMainText/{id}","EventController@getEventMainText")->where('id','[0-9]+');
-
-    // For Modals
-
-    Route::get("/getPartial/{partialName}","HomeController@getPartial");
 
 });

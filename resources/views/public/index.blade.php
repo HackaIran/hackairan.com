@@ -73,21 +73,25 @@
 
         <div class="hackaSection" data-name="hackademy">
 
-            <img src="{{asset('assets/images/hackademy.png')}}" alt="Hackademy" title="Hackademy"/>
+            <a href="hackademy" title="Hackademy">
+                <img src="{{asset('assets/images/hackademy.png')}}" alt="Hackademy" title="Hackademy"/>
 
-            <h2>
-                Hacka<span class="highlight">demy</span>
-            </h2>
+                <h2>
+                    Hacka<span class="highlight">demy</span>
+                </h2>
+            </a>
 
         </div>
 
         <div class="hackaSection" data-name="hackateamup">
 
-            <img src="{{asset('assets/images/teamup.png')}}" alt="HackaTeamUp" title="HackaTeamup"/>
+            <a href="hackateamup" title="Hackademy">
+                <img src="{{asset('assets/images/teamup.png')}}" alt="HackaTeamUp" title="HackaTeamup"/>
 
-            <h2>
-                Hacka<span class="highlight">Teamup</span>
-            </h2>
+                <h2>
+                    Hacka<span class="highlight">Teamup</span>
+                </h2>
+            </a>
 
         </div>
 
@@ -106,19 +110,19 @@
                 <div id="eventDescriptionCont">
 
                     <a href="#" target="_blank" id="eventBtn" data-active="true">
-                        Register
+                        Nothing To Register!
                     </a>
 
                     <h2>
-                        Event's Title
+
                     </h2>
 
                     <h3>
-                        Pardis
+
                     </h3>
 
                     <time>
-                        Feb 02 - 13 Bahman
+
                     </time>
 
                     <p>
@@ -291,6 +295,10 @@
 </div>
 
 <!-- scripts -->
+
+<script>
+    window.type = 0;
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 

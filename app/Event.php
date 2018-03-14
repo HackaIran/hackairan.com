@@ -9,7 +9,10 @@ class Event extends Model
 {
     //
 
-    protected $fillable = ["title","short_description","description","register_link","location","time","from","to"];
+    protected $fillable = ["title","short_description","description","register_link","location","time","from","to","type"];
+
+    //Mutators & Accessors
+
 
     function setDescriptionAttribute($value){
         $this->attributes['description'] = Purifier::clean($value);

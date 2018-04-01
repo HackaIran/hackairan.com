@@ -20,7 +20,7 @@ class HackaParts extends Migration
             $table->string("address");
             $table->string("name");
             $table->string("logo_address","400")->nullable();
-            $table->string("description","800");
+            $table->text("description");
             $table->string("header_image","400");
             $table->string("keywords","400");
             $table->string("short_description","100");

@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>{{$data->name}} | {{$data->short_description}} || Hacka{Iran}</title>
+    <title>{{$data->name}} | Hacka{Iran}</title>
 
     <!-- Meta Tags -->
 

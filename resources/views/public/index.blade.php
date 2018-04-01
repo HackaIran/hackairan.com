@@ -22,6 +22,13 @@
 
     <link rel="stylesheet" href="{{asset('css/global/style.css')}}">
 
+    <!-- Specially Fot This Page -->
+    <style>
+        #headerIntro{
+            position: absolute;
+        }
+    </style>
+
     <link rel="stylesheet" href="{{asset('css/global/responsive.css')}}">
 
     <!-- Fav Icon -->

@@ -18,8 +18,8 @@ img {
     pointer-events: none;
 }
 
-body{
-    background-color:#000;
+body {
+    background-color: #000;
 }
 
 /* elements */
@@ -42,6 +42,7 @@ body{
     height: 500px;
     position: relative;
     overflow: hidden;
+    display: table;
 }
 
 #mainHeader > video {
@@ -60,11 +61,14 @@ body{
 #headerIntro {
     width: 100%;
     max-width: 550px;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
 
 #headerIntro > img {
@@ -79,6 +83,10 @@ body{
     margin-bottom: 25px;
     pointer-events: none;
     user-select: none;
+}
+
+#headerIntro > h1 > img {
+    width: 100%;
 }
 
 #headerIntro > p {
@@ -157,13 +165,13 @@ body{
     transition-duration: 0.2s;
 }
 
-#hackaSections > div>a{
+#hackaSections > div > a {
     display: block;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
-#hackaSections > div>a > img {
+#hackaSections > div > a > img {
     height: 110px;
     position: absolute;
     top: 50%;
@@ -171,11 +179,11 @@ body{
     transform: translate(-50%, -50%) translateY(-20px);
 }
 
-#hackaSections > div>a > h2 {
+#hackaSections > div > a > h2 {
     width: 100%;
     position: absolute;
     top: 50%;
-    color:white;
+    color: white;
     left: 50%;
     transform: translate(-50%, -50%) translateY(70px);
     user-select: none;
@@ -202,7 +210,7 @@ body{
 
 #eventSectionWrapper {
     filter: blur(15px);
-    width:100%;
+    width: 100%;
     display: flex;
 }
 
@@ -275,7 +283,7 @@ body{
     font-weight: normal;
 }
 
-#eventSection>div > div {
+#eventSection > div > div {
     flex-grow: 4;
     display: flex;
     flex-direction: column;
@@ -551,76 +559,78 @@ body{
 
 /* Gallery Section */
 
-#galleryCont{
+#galleryCont {
     width: 100%;
     height: 300px;
-    bcakground-color:red;
+    bcakground-color: red;
     overflow: hidden;
     position: relative;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
-#galleryImagesCont{
-    min-width:100%;
+#galleryImagesCont {
+    min-width: 100%;
     display: flex;
     direction: rtl;
     height: 300px;
     transition-duration: 0.5s;
 }
-.galleryImage{
+
+.galleryImage {
     height: 300px;
     width: auto;
     float: right;
 }
-.galleryImage>img{
+
+.galleryImage > img {
     height: 300px;
     user-select: none;
 }
 
-#ltArrow{
-    left:0px;
-    background: linear-gradient(to right, black , transparent);
+#ltArrow {
+    left: 0px;
+    background: linear-gradient(to right, black, transparent);
 }
-#rtArrow{
-    right:0px;
-    background: linear-gradient(to left, black , transparent);
+
+#rtArrow {
+    right: 0px;
+    background: linear-gradient(to left, black, transparent);
     display: none;
 }
 
-#ltArrow:hover{
+#ltArrow:hover {
     transition-duration: 0.5s;
-    width:200px;
+    width: 200px;
 }
 
-#rtArrow:hover{
+#rtArrow:hover {
     transition-duration: 0.5s;
-    width:200px;
+    width: 200px;
 }
 
-#ltArrow:hover>i,#rtArrow:hover>i{
-    opacity:1;
+#ltArrow:hover > i, #rtArrow:hover > i {
+    opacity: 1;
     transition-duration: 0.5s;
 }
 
-
-.arrow-right,.arrow-left{
+.arrow-right, .arrow-left {
     position: absolute;
-    top:0px;
-    bottom:0px;
-    right:0px;
-    left:0px;
-    opacity:0.4;
-    margin:auto;
-    height:0px;
-    width:0px;
-    user-select:none;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    opacity: 0.4;
+    margin: auto;
+    height: 0px;
+    width: 0px;
+    user-select: none;
     transition-duration: 0.5s;
 }
 
 .arrow-right:after,
 .arrow-right:before,
 .arrow-left:after,
-.arrow-left:before{
+.arrow-left:before {
     content: ' ';
     position: absolute;
     width: 15px;
@@ -645,12 +655,12 @@ body{
     transform: translate(-50%, -50%) rotate(45deg) translateX(50%) translateX(-1px);
 }
 
-#rtArrow,#ltArrow{
-    width:80px;
-    height:100%;
+#rtArrow, #ltArrow {
+    width: 80px;
+    height: 100%;
     position: absolute;
-    top:0px;
-    bottom:0px;
+    top: 0px;
+    bottom: 0px;
     cursor: pointer;
     transition-duration: 0.5s;
     z-index: 5;
@@ -676,10 +686,10 @@ body{
 
 /*modal*/
 
-.modalWrapper{
+.modalWrapper {
     transition-duration: 0.5s;
-    opacity:0;
-    background-color:#000;
+    opacity: 0;
+    background-color: #000;
     z-index: 100;
     width: 100%;
     height: 100%;
@@ -687,36 +697,36 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    bottom:0px;
-    right:0px;
+    bottom: 0px;
+    right: 0px;
     overflow-y: auto;
-    margin:auto;
+    margin: auto;
     visibility: hidden;
-    padding:20px;
+    padding: 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.modalCont{
-    transition-duration:0.5s;
+.modalCont {
+    transition-duration: 0.5s;
     transform: scale(0.5);
 }
 
-.modalHeadImg{
+.modalHeadImg {
     height: auto;
     width: auto;
     display: block;
-    margin:auto;
+    margin: auto;
 }
 
-.modalCont>header>h2 {
+.modalCont > header > h2 {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.closeModal{
+.closeModal {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -728,7 +738,7 @@ body{
     z-index: 5;
 }
 
-.modalCont main{
+.modalCont main {
     width: 100%;
     padding: 10px;
     -webkit-box-sizing: border-box;
@@ -834,18 +844,18 @@ body{
 
 /* Parts for hackaparts */
 
-#headerIntro.hackaPart{
-    top:30px;
-    left:0px;
-    right:0px;
-    margin:auto;
+#headerIntro.hackaPart {
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
     transform: none;
 }
 
-#headerIntro.hackaPart > h1{
+#headerIntro.hackaPart > h1 {
     margin-top: 50px;
-    margin-bottom:50px;
-    font-size:60px;
+    margin-bottom: 50px;
+    font-size: 60px;
 }
 
 #mainHeader > img {
@@ -855,7 +865,7 @@ body{
 }
 
 #headerIntro.hackaPart > img {
-    width: 90px!important;
+    width: 90px !important;
     user-select: none;
     pointer-events: none;
 }

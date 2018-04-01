@@ -13,7 +13,7 @@ class Gallery extends Model
     //Relations
 
     public function part(){
-        return $this->hasOne("App\HackaPart","id","type");
+        return $this->belongsTo("App\HackaPart","type","id");
     }
 
     public function images(){

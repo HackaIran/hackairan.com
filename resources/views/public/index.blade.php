@@ -60,7 +60,9 @@
         </div>
 
         <div id="headerIntro">
-            <img src="{{asset("assets/images/hacka_white.png")}}" alt="Hacka Global" title="Hacka Global"/>
+            <a href="{{url('/')}}">
+                <img src="{{asset("assets/images/hacka_white.png")}}" alt="Hacka Global" title="Hacka Global"/>
+            </a>
             <h1>
                 Hacka
                 <span class="highlight">{Iran}</span>
@@ -110,6 +112,11 @@
     <section class="section" id="eventSection">
         <div class="md-preloader" id="eventPreLoader">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="32" width="32" viewbox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" stroke-width="8"/></svg>
+        </div>
+        <div id="noEventFound">
+            <span>
+                No Events To Be Shown
+            </span>
         </div>
         <div id="eventSectionWrapper">
             <div>

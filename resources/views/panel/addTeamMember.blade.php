@@ -34,6 +34,7 @@
                 '_token': '{{csrf_token()}}',
                 'name': $('#name').val(),
                 'position':$("#position").val(),
+                'email':$("#email").val(),
                 'linkedin': $('#linkedin').val(),
                 'dribble': $('#dribble').val(),
                 'site': $('#site').val(),

@@ -39,10 +39,9 @@ body {
 
 #mainHeader {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     position: relative;
     overflow: hidden;
-    display: table;
 }
 
 #mainHeader > video {
@@ -71,7 +70,13 @@ body {
     box-sizing: border-box;
 }
 
-#headerIntro > img {
+#headerIntro > a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#headerIntro > a > img {
     width: 180px;
     user-select: none;
     pointer-events: none;
@@ -206,6 +211,22 @@ body {
     bottom: 0px;
     margin: auto;
     color: #fec10b;
+}
+
+#noEventFound{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    width: 100%;
+    height:100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    font-size:26px;
 }
 
 #eventSectionWrapper {
@@ -430,7 +451,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-wrap: wrap;
     margin-top: 30px;
 }
@@ -845,7 +866,7 @@ body {
 /* Parts for hackaparts */
 
 #headerIntro.hackaPart {
-    top: 30px;
+    padding-top:30px;
     left: 0px;
     right: 0px;
     margin: auto;

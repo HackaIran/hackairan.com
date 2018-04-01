@@ -21,6 +21,9 @@ class TimeLine {
         this.initialEvents();
 
         if(this.bars.length == 0){// if there is no events
+
+            this._noEventFound();
+
             return;
         }
 
@@ -219,6 +222,11 @@ class TimeLine {
     _hideLoading(){
         document.querySelector("#eventPreLoader").remove();
         document.querySelector("#eventSectionWrapper").style.filter = "blur(0px)";
+    }
+
+    _noEventFound(){
+        document.querySelector("#noEventFound").style.display = "flex";
+        document.querySelector("#eventSectionWrapper").style.filter = "blur(15px)";
     }
 
 }

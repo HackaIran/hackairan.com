@@ -14,9 +14,9 @@ class HomeController extends Controller{
 
         $description = General::where("id",1)->get(["value"])->first();
 
-        $teams = OurTeam::orderBy("id","desc")->get();
+        $teams = OurTeam::get();
 
-        $sponsors = Sponsor::orderBy("id","desc")->get();
+        $sponsors = Sponsor::get();
 
         return view('public/index',['description'=>$description,'teams'=>$teams,'sponsors'=>$sponsors]);
     }

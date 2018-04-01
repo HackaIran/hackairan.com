@@ -6,7 +6,7 @@ class GallerySlider {
 
         // check whether the page has gallery or not
 
-        if(!this.galleryImageCont){
+        if (!this.galleryImageCont) {
             return;
         }
 
@@ -20,7 +20,7 @@ class GallerySlider {
 
         this.widths = [];
 
-        images.forEach((image)=>{
+        images.forEach((image) => {
             this.widths.push(image.offsetWidth)
         })
 
@@ -34,15 +34,15 @@ class GallerySlider {
 
     }
 
-    initEvents(){
+    initEvents() {
 
-        this.rtArrow.onclick = ()=>{
+        this.rtArrow.onclick = () => {
 
             this.previous();
 
         };
 
-        this.ltArrow.onclick = ()=>{
+        this.ltArrow.onclick = () => {
 
 
             this.ltArrow.style.display = "block";
@@ -54,43 +54,42 @@ class GallerySlider {
 
     }
 
-    next(){
+    next() {
 
         let right = this.right + window.innerWidth;
 
         let total = 0;
         let i;
-        for(i = 0;i<this.widths.length;i++){
+        for (i = 0; i < this.widths.length; i++) {
             total += this.widths[i];
-            if(total>right){
+            if (total > right) {
                 break;
             }
         }
 
         let transform = total - right;
 
-        this.galleryImageCont.style.transform = "translateX("+(transform + this.right)+"px)";
+        this.galleryImageCont.style.transform = "translateX(" + (transform + this.right) + "px)";
 
-        this.right+=transform;
+        this.right += transform;
 
-        if(!this.widths[i+1]){
+        if (!this.widths[i + 1]) {
             // End
             this.ltArrow.style.display = "none";
-        }else{
-            this.ltArrow.style.display = "block";
+        } else {
+            this.rtArrow.style.display = "block";
         }
-
     }
 
-    previous(){
+    previous() {
 
         let right = this.right;
 
         let total = 0;
         let i;
-        for(i = 0;i<this.widths.length;i++){
+        for (i = 0; i < this.widths.length; i++) {
             total += this.widths[i];
-            if(total>=right){
+            if (total >= right) {
                 total -= this.widths[i];
                 break;
             }
@@ -98,17 +97,16 @@ class GallerySlider {
 
         let transform = this.right - total;
 
-        this.galleryImageCont.style.transform = "translateX("+(this.right - transform)+"px)";
+        this.galleryImageCont.style.transform = "translateX(" + (this.right - transform) + "px)";
 
         this.right -= transform;
 
-        if(!this.widths[i-1]){
+        if (!this.widths[i - 1]) {
             // End
             this.rtArrow.style.display = "none";
-        }else{
-            this.rtArrow.style.display = "block";
+        } else {
+            this.ltArrow.style.display = "block";
         }
-
     }
 
 

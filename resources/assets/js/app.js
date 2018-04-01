@@ -6,7 +6,12 @@ const GallerySlide = require("./src/GallerySlider");
 
 const loading = new Loading();
 
-const gallerySlider = new GallerySlide();
+// After images are loaded
+
+window.addEventListener("load",()=>{
+    const gallerySlider = new GallerySlide();
+})
+
 
 document.addEventListener("DOMContentLoaded", () => {
 

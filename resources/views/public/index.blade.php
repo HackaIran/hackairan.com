@@ -80,18 +80,6 @@
 
     <section class="section" id="hackaSections">
 
-        <div class="hackaSection" data-name="hackademy">
-
-            <a href="hackademy" title="Hackademy">
-                <img src="{{asset('assets/images/hackademy.png')}}" alt="Hackademy" title="Hackademy"/>
-
-                <h2>
-                    Hacka<span class="highlight">demy</span>
-                </h2>
-            </a>
-
-        </div>
-
         <div class="hackaSection" data-name="hackateamup">
 
             <a href="hackateamup" title="Hackademy">
@@ -99,6 +87,18 @@
 
                 <h2>
                     Hacka<span class="highlight">Teamup</span>
+                </h2>
+            </a>
+
+        </div>
+
+        <div class="hackaSection" data-name="hackademy">
+
+            <a href="hackademy" title="Hackademy">
+                <img src="{{asset('assets/images/hackademy.png')}}" alt="Hackademy" title="Hackademy"/>
+
+                <h2>
+                    Hacka<span class="highlight">demy</span>
                 </h2>
             </a>
 
@@ -115,7 +115,7 @@
         </div>
         <div id="noEventFound">
             <span>
-                No Events To Be Shown
+                It seems that there’s no event in next 2 months!
             </span>
         </div>
         <div id="eventSectionWrapper">

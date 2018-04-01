@@ -8,7 +8,7 @@ class TimeLine {
 
         this.upComingWrapper = document.querySelector("#eventSection>div>aside>ul");
 
-        this.inactives = this.bars.filter(item=>item.time.timestamp < Date.now()).length;
+        this.inactives = this.bars.filter(item => item.time.timestamp < Date.now()).length;
 
         this.appendBarLines();
 
@@ -20,19 +20,18 @@ class TimeLine {
 
         this.initialEvents();
 
-        if(this.bars.length == 0){// if there is no events
+        if (this.bars.length == 0) {// if there is no events
 
             this._noEventFound();
 
             return;
         }
 
-        if(this.bars.length - this.inactives == 0){// all events are passed
-            this.showEvent(this.inactives-1);//showing the nearest past event
-        }else{
+        if (this.bars.length - this.inactives == 0) {// all events are passed
+            this.showEvent(this.inactives - 1);//showing the nearest past event
+        } else {
             this.showEvent(this.inactives);//showing the nearest upcoming event
         }
-
 
 
     }
@@ -67,19 +66,19 @@ class TimeLine {
     //
     ///////////
 
-    appendUpcomingEvents(){
+    appendUpcomingEvents() {
 
         for (let bar of this.bars) {
 
-            if(bar.time.timestamp < Date.now()){
+            if (bar.time.timestamp < Date.now()) {
                 continue;
             }
 
             let upComEl = document.createElement("li");
 
-            upComEl.setAttribute("data-active","false");
+            upComEl.setAttribute("data-active", "false");
 
-            upComEl.innerHTML = "<h3>"+bar.title+"</h3><h4>"+bar.location+"</h4><time>"+bar.time.nameGregorian + " - " + bar.time.nameJalali;
+            upComEl.innerHTML = "<h3>" + bar.title + "</h3><h4>" + bar.location + "</h4><time>" + bar.time.nameGregorian + " - " + bar.time.nameJalali;
 
             this.upComingWrapper.appendChild(upComEl);
 
@@ -108,7 +107,7 @@ class TimeLine {
         for (let i = 0; i < upComs.length; i++) {
             upComs[i].onclick = () => {
                 //Showing Event
-                this.showEvent(i+this.inactives);
+                this.showEvent(i + this.inactives);
             }
         }
 
@@ -122,13 +121,23 @@ class TimeLine {
 
         let remaining = Math.abs(diffWithNow) + ' days';
 
-        if (Math.abs(diffWithNow) > 30) remaining = '~' + Math.floor(Math.abs(diffWithNow) / 30) + ' months';
+        if (Math.abs(diffWithNow) > 30) {
+
+            let remMonth = Math.floor(Math.abs(diffWithNow) / 30);
+
+            if (remMonth > 1) {
+                remaining = '~' + remMonth + ' months';
+            } else {
+                remaining = '~' + remMonth + ' month';
+            }
+
+        }
 
         remaining += diffWithNow < 0 ? ' ago' : ' to go';
 
-        if (diffWithNow === 0){
-            if(moment().diff(date,"hours") >= 0){
-                remaining = moment().diff(date,"hours") + " Hours Left";
+        if (diffWithNow === 0) {
+            if (moment().diff(date, "hours") >= 0) {
+                remaining = moment().diff(date, "hours") + " Hours Left";
             }
         }
 
@@ -167,20 +176,20 @@ class TimeLine {
                     document.querySelector(".bar.active").classList = "bar inactive";
                 }
 
-                if(this.bars[index].time.timestamp >= Date.now()){// if current bar is not passed --> highlight the upcoming event li
+                if (this.bars[index].time.timestamp >= Date.now()) {// if current bar is not passed --> highlight the upcoming event li
 
-                    if(this.upComingWrapper.querySelector("li[data-active=true]")){
-                        this.upComingWrapper.querySelector("li[data-active=true]").setAttribute("data-active","false");
+                    if (this.upComingWrapper.querySelector("li[data-active=true]")) {
+                        this.upComingWrapper.querySelector("li[data-active=true]").setAttribute("data-active", "false");
                     }
 
-                    this.upComingWrapper.querySelectorAll("li")[index - this.inactives].setAttribute("data-active","true");
+                    this.upComingWrapper.querySelectorAll("li")[index - this.inactives].setAttribute("data-active", "true");
 
-                }else{
+                } else {
 
                     //unhighlight the upcoming li(if exists)
 
-                    if(this.upComingWrapper.querySelector("li[data-active=true]")){
-                        this.upComingWrapper.querySelector("li[data-active=true]").setAttribute("data-active","false");
+                    if (this.upComingWrapper.querySelector("li[data-active=true]")) {
+                        this.upComingWrapper.querySelector("li[data-active=true]").setAttribute("data-active", "false");
                     }
                 }
 
@@ -207,7 +216,7 @@ class TimeLine {
             eventBtn.innerText = "Passed!";
         }
 
-        eventBtn.setAttribute("href",bar.register_link);
+        eventBtn.setAttribute("href", bar.register_link);
 
         document.querySelector("#eventDescriptionCont>h2").innerText = bar.title;
 
@@ -219,12 +228,12 @@ class TimeLine {
 
     }
 
-    _hideLoading(){
+    _hideLoading() {
         document.querySelector("#eventPreLoader").remove();
         document.querySelector("#eventSectionWrapper").style.filter = "blur(0px)";
     }
 
-    _noEventFound(){
+    _noEventFound() {
         document.querySelector("#noEventFound").style.display = "flex";
         document.querySelector("#eventSectionWrapper").style.filter = "blur(15px)";
     }

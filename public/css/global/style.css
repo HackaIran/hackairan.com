@@ -70,7 +70,7 @@ body {
     box-sizing: border-box;
 }
 
-#headerIntro > a{
+#headerIntro > a {
     width: 100%;
     height: 100%;
     display: block;
@@ -154,7 +154,7 @@ body {
     background-color: rgb(31, 31, 31);
     position: relative;
     text-align: center;
-    margin: 10px;
+    margin: 30px;
     border-radius: 15px;
     cursor: pointer;
     transition-duration: 0.2s;
@@ -213,7 +213,7 @@ body {
     color: #fec10b;
 }
 
-#noEventFound{
+#noEventFound {
     position: absolute;
     right: 0px;
     left: 0px;
@@ -221,12 +221,12 @@ body {
     bottom: 0px;
     margin: auto;
     width: 100%;
-    height:100%;
+    height: 100%;
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    font-size:26px;
+    font-size: 26px;
 }
 
 #eventSectionWrapper {
@@ -866,7 +866,7 @@ body {
 /* Parts for hackaparts */
 
 #headerIntro.hackaPart {
-    padding-top:30px;
+    padding-top: 30px;
     left: 0px;
     right: 0px;
     margin: auto;
@@ -874,9 +874,19 @@ body {
 }
 
 #headerIntro.hackaPart > h1 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     font-size: 60px;
+}
+
+#headerIntro.hackaPart > h4 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#headerIntro.hackaPart > h4 > a {
+    color: white;
+    text-decoration: none;
 }
 
 #mainHeader > img {
@@ -889,4 +899,8 @@ body {
     width: 90px !important;
     user-select: none;
     pointer-events: none;
+}
+
+#headerIntro.hackaPart > a > img {
+    width: 120px;
 }

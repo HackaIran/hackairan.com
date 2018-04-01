@@ -42,7 +42,7 @@
 
     <header id="mainHeader">
 
-        <img src="{{$data->header_image}}" />
+        <img src="{{$data->header_image}}"/>
 
         <div id="videoOverlay">
 
@@ -53,14 +53,16 @@
                 <img src="{{asset("assets/images/hacka_white.png")}}" alt="Hacka Global" title="Hacka Global"/>
             </a>
             <h4>
-                Hacka
-                <span class="highlight">{Iran}</span>
+                <a href="{{url('/')}}">
+                    Hacka
+                    <span class="highlight">{Iran}</span>
+                </a>
             </h4>
             <h1>
                 @if($data->logo_address == null || $data->logo_address == "")
                     {{$data->description}}
                 @else
-                    <img src="{{$data->logo_address}}" />
+                    <img src="{{$data->logo_address}}"/>
                 @endif
             </h1>
             <p class="text">
@@ -74,11 +76,13 @@
 
     <section class="section" id="eventSection">
         <div class="md-preloader" id="eventPreLoader">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="32" width="32" viewbox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" stroke-width="8"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="32" width="32" viewbox="0 0 75 75">
+                <circle cx="37.5" cy="37.5" r="33.5" stroke-width="8"/>
+            </svg>
         </div>
         <div id="noEventFound">
             <span>
-                No Events To Be Shown
+                It seems that there’s no {{$data->name}} in the next 2 months!
             </span>
         </div>
         <div id="eventSectionWrapper">
@@ -133,40 +137,40 @@
 
     </section>
 
-    @if(count($gallery) != 0)
+@if(count($gallery) != 0)
 
     <!-- Gallery Section -->
 
-    <section class="section" id="gallerySection">
+        <section class="section" id="gallerySection">
 
-        <header class="sectionheader">
+            <header class="sectionheader">
 
-            <h2>
+                <h2>
 
-                Gallery,
-                <span class="highlight">Our Memories!</span>
+                    Gallery,
+                    <span class="highlight">Our Memories!</span>
 
-            </h2>
+                </h2>
 
-        </header>
+            </header>
 
-        <div id="galleryCont">
-            <div id="rtArrow">
-                <i class="arrow-right"></i>
+            <div id="galleryCont">
+                <div id="rtArrow">
+                    <i class="arrow-right"></i>
+                </div>
+                <div id="ltArrow">
+                    <i class="arrow-left"></i>
+                </div>
+                <div id="galleryImagesCont">
+                    @foreach($gallery->images as $image)
+                        <div class="galleryImage">
+                            <img src="{{$image->image_address}}"/>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-            <div id="ltArrow">
-                <i class="arrow-left"></i>
-            </div>
-            <div id="galleryImagesCont">
-                @foreach($gallery->images as $image)
-                    <div class="galleryImage">
-                        <img src="{{$image->image_address}}" />
-                    </div>
-                @endforeach
-            </div>
-        </div>
 
-    </section>
+        </section>
 
     @endif
 

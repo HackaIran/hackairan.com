@@ -12,6 +12,16 @@
         padding: 0px 5px 0px 5px;
     }
 
+	#eventDescriptionCont > h2{
+		font-size:26px!important;
+	}
+
+    #eventDescriptionCont{
+
+        padding: 40px 30px!important;
+
+    }
+ 
 }
 
 @media only screen and (max-width: 1050px) {

@@ -14,7 +14,7 @@ class HomeController extends Controller{
 
         $description = General::where("id",1)->get(["value"])->first();
 
-        $teams = OurTeam::get();
+        $teams = OurTeam::orderBy("id","asc")->get();
 
         $sponsors = Sponsor::get();
 

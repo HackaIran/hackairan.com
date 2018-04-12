@@ -520,7 +520,8 @@ body {
 }
 
 #sponsorsSection > div > div {
-    width: 100px;
+    max-width: 120px;
+    max-height: 70px;
     padding: 20px;
     transition-duration: 0.2s;
 }
@@ -536,7 +537,8 @@ body {
 }
 
 #sponsorsSection > div > div > a > img {
-    width: 100px;
+    max-width: 120px;
+    max-height: 70px;
 }
 
 #timeline #now {

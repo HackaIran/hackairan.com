@@ -21,4 +21,13 @@ class HomeController extends Controller{
         return view('public/index',['description'=>$description,'teams'=>$teams,'sponsors'=>$sponsors]);
     }
 
+    public function showHOPE($path = ""){
+
+        $url = 'https://boiling-ocean-90989.herokuapp.com/'.$path;
+
+        return view('public/subdomains/iframe',['url'=>$url,'title'=>'HOPE']);
+
+
+    }
+
 }

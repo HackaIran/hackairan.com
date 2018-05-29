@@ -22,7 +22,8 @@ class App extends Component {
         </BrowserRouter>
       );
     }
-  }
+    
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

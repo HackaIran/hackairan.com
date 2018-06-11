@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'hackairan com' });
-});
+const HomeController = require('../server/Controllers/HomeController');
+
+// Get main page
+
+router.get('/', HomeController.showIndex);
+
+// Get hacka parts
+
+router.get('/:name', HomeController.showHackaPart);
 
 module.exports = router;

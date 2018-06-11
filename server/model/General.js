@@ -1,6 +1,6 @@
 const db = require('./db');
 
-const GeneralSchema = db.Schema({
+const GeneralSchema = new db.Schema({
     address: {
         type: String,
         required: true,

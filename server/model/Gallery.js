@@ -1,6 +1,6 @@
 const db = require('./db');
 
-const GallerySchema = db.Schema({
+const GallerySchema = new db.Schema({
     name: {
         type: String,
         required: true

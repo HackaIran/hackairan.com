@@ -3,7 +3,7 @@ const md5 = require('md5');
 
 const passportLocalMongoose = require('passport-local-mongoose');
 
-const UserSchema = db.Schema({
+const UserSchema = new db.Schema({
     name: String,
     lastName: String,
     username: {

@@ -1,6 +1,6 @@
 const db = require('./db');
 
-const EventSchema = db.Schema({
+const EventSchema = new db.Schema({
     title: {
         type: String,
         required: true

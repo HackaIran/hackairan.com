@@ -1,6 +1,6 @@
 const db = require('./db');
 
-const HackaPartSchema = db.Schema({
+const HackaPartSchema = new db.Schema({
     address:{
         type: String,
         required: true,

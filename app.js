@@ -15,6 +15,8 @@ const pe = new PrettyError;
 
 const index = require('./routes/index');
 const api = require('./routes/api');
+const auth = require('./routes/auth');
+const apiPanel = require('./routes/panel/api');
 
 const app = express();
 
@@ -34,6 +36,13 @@ app.use(sassMiddleware({
   debug: true,
   outputStyle: 'compressed',
 }))
+app.use(require('express-session')({
+  secret: 'cool hackers',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // For title
 
@@ -46,7 +55,9 @@ app.use(function(req, res, next){
 });
 
 app.use('/', index);
+app.use('/user', auth);
 app.use('/api', api);
+app.use('/api/panel', apiPanel);
 
 // passport configuration
 var User = require('./server/model/User');

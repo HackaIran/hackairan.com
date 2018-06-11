@@ -14,6 +14,7 @@ const config = require('./config/config');
 const pe = new PrettyError;
 
 const index = require('./routes/index');
+const api = require('./routes/api');
 
 const app = express();
 
@@ -45,6 +46,7 @@ app.use(function(req, res, next){
 });
 
 app.use('/', index);
+app.use('/api', api);
 
 // passport configuration
 var User = require('./server/model/User');

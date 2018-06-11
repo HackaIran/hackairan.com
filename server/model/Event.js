@@ -22,6 +22,6 @@ const EventSchema = db.Schema({
     }
 });
 
-const Sample = db.model('Sample', sampleSchema);
+const Event = db.model('Sample', EventSchema);
 
-module.exports = Sample;
+module.exports = Event;

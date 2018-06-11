@@ -2,6 +2,7 @@ const Team = require('../model/Team');
 const Sponsor = require('../model/Sponsor');
 const General = require('../model/General');
 const HackaPart = require('../model/HackaPart');
+const Gallery = require('../model/Gallery');
 
 class HomeController {
 
@@ -34,9 +35,20 @@ class HomeController {
             address: name
         });
 
-        if(hackapart){
-            res.render('part', {part: hackapart});
-        }else{
+        let gallery = await Gallery.findOne({}, null, {
+            sort: {
+                '_id': -1
+            }
+        })
+
+        console.log(JSON.stringify(gallery))
+
+        if (hackapart) {
+            res.render('part', {
+                part: hackapart,
+                gallery
+            });
+        } else {
             res.sendStatus(404);
         }
 

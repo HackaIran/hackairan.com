@@ -11,10 +11,7 @@ const UserSchema = new db.Schema({
         required: true,
         unique: true
     },
-    password:{
-        type: String,
-        required: true
-    },
+    password: String,
     email:{
         type: String,
         required: true,

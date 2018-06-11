@@ -9,6 +9,8 @@ const sassMiddleware = require('node-sass-middleware');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
+const config = require('./config/config');
+
 const pe = new PrettyError;
 
 const index = require('./routes/index');
@@ -31,6 +33,16 @@ app.use(sassMiddleware({
   debug: true,
   outputStyle: 'compressed',
 }))
+
+// For title
+
+app.use(function(req, res, next){
+
+  res.locals.generalInfo = config.general;
+
+  next();
+
+});
 
 app.use('/', index);
 

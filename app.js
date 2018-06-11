@@ -5,6 +5,9 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const PrettyError = require('pretty-error');
+const sassMiddleware = require('node-sass-middleware');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 
 const pe = new PrettyError;
 
@@ -22,8 +25,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(sassMiddleware({
+  src: path.join(__dirname, 'client', 'stylesheets'),
+  dest: path.join(__dirname, 'dist', 'stylesheets'),
+  debug: true,
+  outputStyle: 'compressed',
+}))
 
 app.use('/', index);
+
+// passport configuration
+var User = require('./server/model/User');
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

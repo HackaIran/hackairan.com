@@ -22,7 +22,7 @@ const UserSchema = new db.Schema({
     }
 });
 
-UserSchema.virrual('fullName').get(function(){
+UserSchema.virtual('fullName').get(function(){
     return this.name + ' ' + this.lastName;
 })
 
@@ -32,6 +32,6 @@ UserSchema.virtual('gravatar').get(function () {
 
 UserSchema.plugin(passportLocalMongoose);
 
-const User = db.model('User', userSchema);
+const User = db.model('User', UserSchema);
 
 module.exports = User;

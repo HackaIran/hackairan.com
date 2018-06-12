@@ -1,7 +1,9 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     devtool: 'inline-source-map',
-    entry: './client/index.js',
+    entry: './client/src/index.js',
     output: {
         filename: './javascripts/bundle.js',
         sourceMapFilename: './javascripts/bundle.js.map'
@@ -12,7 +14,7 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
-                query: { presets: ['es2015'] }
+                query: { presets: ['es2015','react'] }
             }, {
                 test: /\.sass$/,
                 use: [{ loader: "style-loader" }, { loader: "css-loader?-url" }, { loader: "sass-loader" }]

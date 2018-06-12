@@ -4,10 +4,21 @@
 
 /**
  * Set up a decent box model on the root element
+ * let's set a font-size of 10px
  */
 html {
   box-sizing: border-box;
+  font-size: calc(100% * 0.625);
 }
+
+/**
+ * Remove margins and paddings of the body
+ */
+
+ body{
+   margin: 0;
+   font-size: 100%;
+ }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -25,7 +36,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $highlight;
   text-decoration: none;
 
   @include on-event {

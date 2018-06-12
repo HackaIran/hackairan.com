@@ -18,11 +18,11 @@
 @import
   'layout/layout',
   'layout/header',
-  'layout/events',
   'layout/footer';
 
 // 5. Components
 @import
+  'components/events',
   'components/button';
 
 // 6. Page-specific styles

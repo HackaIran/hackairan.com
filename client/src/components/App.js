@@ -2,13 +2,20 @@ import React from 'react'
 import Radium,{StyleRoot} from 'radium'
 
 import Header from './Header';
+import Events from './Events';
 
 class App extends React.Component {
     render() {
         return (
-            <Header>
+            <div>
+                <Header>
 
-            </Header>
+                </Header>
+                <Events>
+
+                </Events>
+            </div>
+            
         )
     }
 }

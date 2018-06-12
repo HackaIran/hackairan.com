@@ -1,0 +1,9 @@
+#app{
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: [header-start] 50rem [header-end events-start] minmax(10rem, min-content) [events-end timeline-start] 45rem [timeline-end team-start] minmax(37rem, min-content) [team-end sponsor-start] minmax(20rem, min-content) [sponsor-end];
+
+}

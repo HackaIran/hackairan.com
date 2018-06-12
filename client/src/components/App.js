@@ -3,6 +3,7 @@ import Radium,{StyleRoot} from 'radium'
 
 import Header from './Header';
 import Events from './Events';
+import UpComingEvents from './UpComingEvents';
 
 class App extends React.Component {
     render() {
@@ -14,6 +15,12 @@ class App extends React.Component {
                 <Events>
 
                 </Events>
+                <StyleRoot>
+                    <UpComingEvents>
+
+                    </UpComingEvents>
+                </StyleRoot>
+                
             </div>
             
         )

@@ -1,6 +1,8 @@
 import React from 'react'
 import Radium from 'radium'
 
+import Sponsor from './sub-components/Sponsor';
+
 class Sponsors extends React.Component {
 
     constructor (props) {
@@ -29,13 +31,7 @@ class Sponsors extends React.Component {
     get sponsors () {
         const sponsors = [];
         for (let sponsor of this.state.sponsors) sponsors.push(
-            <div key={sponsor.name} className="sponsor">
-                <a href={sponsor.link} target="_blank">
-                    <img
-                        src={`./assets/images/sponsors/${sponsor.image}`}
-                        alt={`Hacka Sponsors | ${sponsor.name}`} />
-                </a>
-            </div>
+            <Sponsor name={sponsor.name} image={sponsor.image} link={sponsor.link} />
         );
         return sponsors;
     }

@@ -16,9 +16,8 @@ class App extends React.Component {
 
                 <ProgressBar />
 
-                <Header>
-
-                </Header>
+                <Header />
+                
                 <Events />
                 
                 <UpComingEvents />

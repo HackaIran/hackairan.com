@@ -17,8 +17,7 @@
 // 4. Layout-related sections
 @import
   'layout/layout',
-  'layout/header',
-  'layout/footer';
+  'layout/header';
 
 // 5. Components
 @import
@@ -26,13 +25,8 @@
   'components/products',
   'components/members',
   'components/sponsors',
-  'components/upComingEvents',
-  'components/button';
+  'components/upComingEvents';
 
 // 6. Page-specific styles
 @import
   'pages/home';
-
-// 7. Themes
-@import
-  'themes/default';

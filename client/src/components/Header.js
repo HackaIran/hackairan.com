@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 
 class Header extends React.Component {
     render() {
@@ -18,4 +17,4 @@ class Header extends React.Component {
     }
 }
 
-export default Radium(Header)
+export default Header

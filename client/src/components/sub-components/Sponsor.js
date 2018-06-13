@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 
 class Sponsor extends React.Component {
     render() {
@@ -15,4 +14,4 @@ class Sponsor extends React.Component {
     }
 }
 
-export default Radium(Sponsor)
+export default Sponsor

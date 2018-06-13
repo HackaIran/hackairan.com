@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 
 class Member extends React.Component {
     render() {
@@ -47,4 +46,4 @@ class Member extends React.Component {
     }
 }
 
-export default Radium(Member)
+export default Member

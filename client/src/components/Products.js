@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 
 import Product from './sub-components/Product';
 
@@ -19,4 +18,4 @@ class Products extends React.Component {
     }
 }
 
-export default Radium(Products)
+export default Products

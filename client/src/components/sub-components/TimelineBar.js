@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 import moment from 'moment'
 
 class TimelineBar extends React.Component {
@@ -26,4 +25,4 @@ class TimelineBar extends React.Component {
     }
 }
 
-export default Radium(TimelineBar)
+export default TimelineBar

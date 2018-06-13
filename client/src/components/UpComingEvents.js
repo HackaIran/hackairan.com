@@ -1,6 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
-import Color from 'color'
 
 import TimelineBar from './sub-components/TimelineBar'
 import PreLoader from './sub-components/PreLoader';
@@ -137,4 +135,4 @@ class UpComingEvents extends React.Component {
     }
 }
 
-export default Radium(UpComingEvents)
+export default UpComingEvents

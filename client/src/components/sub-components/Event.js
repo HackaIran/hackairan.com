@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 
 class Event extends React.Component {
     render() {
@@ -29,4 +28,4 @@ class Event extends React.Component {
     }
 }
 
-export default Radium(Event)
+export default Event

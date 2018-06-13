@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 
 class PreLoader extends React.Component {
     render() {
@@ -11,4 +10,4 @@ class PreLoader extends React.Component {
     }
 }
 
-export default Radium(PreLoader)
+export default PreLoader

@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium,{StyleRoot} from 'radium'
 
 import Header from './Header';
 import Events from './Events';
@@ -17,7 +16,7 @@ class App extends React.Component {
                 <ProgressBar />
 
                 <Header />
-                
+
                 <Events />
                 
                 <UpComingEvents />
@@ -34,4 +33,4 @@ class App extends React.Component {
     }
 }
 
-export default Radium(App)
+export default App

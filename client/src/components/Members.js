@@ -1,5 +1,4 @@
 import React from 'react'
-import Radium from 'radium'
 
 import Member from './sub-components/Member';
 
@@ -60,4 +59,4 @@ class Members extends React.Component {
     }
 }
 
-export default Radium(Members)
+export default Members

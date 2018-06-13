@@ -6,6 +6,7 @@ import Events from './Events';
 import UpComingEvents from './UpComingEvents';
 import Products from './Products';
 import Members from './Members';
+import Sponsors from './Sponsors';
 
 class App extends React.Component {
     render() {
@@ -19,6 +20,8 @@ class App extends React.Component {
                 <Products />
 
                 <Members />
+
+                <Sponsors />
                 
             </div>
             

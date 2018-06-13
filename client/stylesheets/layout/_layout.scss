@@ -8,7 +8,7 @@
         display: grid;
     
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: [header-start] 50rem [header-end events-start] minmax(10rem, min-content) [events-end timeline-start] 45rem [timeline-end products-start] minmax(10rem, min-content) [products-end team-start] minmax(37rem, min-content) [team-end sponsor-start] minmax(20rem, min-content) [sponsor-end];
+        grid-template-rows: [header-start] 50rem [header-end events-start] minmax(10rem, min-content) [events-end timeline-start] 45rem [timeline-end products-start] minmax(10rem, min-content) [products-end team-start] minmax(37rem, min-content) [team-end sponsors-start] minmax(20rem, min-content) [sponsors-end];
     
     }
     

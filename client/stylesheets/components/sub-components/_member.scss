@@ -1,0 +1,68 @@
+.member{
+    color: white;
+    margin: 2rem;
+    width: 20rem;
+    text-align: center;
+
+        .member__image-wrapper{
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+
+            .member__image{
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+        .member__name{
+            margin-top: 0.5rem;
+            font-size: 1.9rem;
+            margin-bottom: 0;
+        }
+
+        .member__description{
+            margin-top: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .member__socials{
+            width: 100%;
+            height: 3rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .member__social{
+                width: 3rem;
+                height: 100%;
+                padding: 0.25rem;
+
+                &.member--not-available{
+                    display: none;
+                }
+
+                &>a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    &>img{
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+
+            }
+
+        }
+
+}

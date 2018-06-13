@@ -1,0 +1,25 @@
+.members{
+
+    margin-top: 23rem;
+    margin-bottom: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    .members__header-title{
+        color: white;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .members__member-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        
+        @import './sub-components/member';
+
+    }
+
+}

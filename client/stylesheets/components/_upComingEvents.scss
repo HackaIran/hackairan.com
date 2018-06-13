@@ -5,6 +5,31 @@
     margin-bottom: 10rem;
     flex-direction: row;
     color: white;
+    transition-duration: 0.3s;
+
+    position: relative;
+
+    &.upComingEvents--isLoading{
+        &>*:not(.preloader){
+            filter: blur(15px);
+            transition-duration: 0.3s;
+        }
+    }
+
+    &:not(.upComingEvents--isLoading){
+        .preloader{
+            display: none;
+        }
+    }
+
+    .preloader{
+        width: 3.2rem;
+        height: 3.2rem;
+        color: #fec10b;
+
+        @include absolute-center;
+
+    }
 
     .upComingEvents__box{
         flex-grow: 4;

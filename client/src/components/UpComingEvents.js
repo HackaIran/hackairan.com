@@ -3,12 +3,14 @@ import Radium from 'radium'
 import Color from 'color'
 
 import TimelineBar from './sub-components/TimelineBar'
+import PreLoader from './sub-components/PreLoader';
 
 class UpComingEvents extends React.Component {
 
     constructor (props) {
         super(props);
         this.state = {
+            isLoaded: false,
             selectedEvent: -1,
             waiting: true,
             events: [],
@@ -48,7 +50,7 @@ class UpComingEvents extends React.Component {
             selectedEvent = event.id;
             break;
         }
-        this.setState({ events: events, waiting: false, selectedEvent: selectedEvent });
+        this.setState({ events: events, waiting: false, selectedEvent: selectedEvent, isLoaded:true });
     }
 
     get bars () {
@@ -109,7 +111,8 @@ class UpComingEvents extends React.Component {
         const finalRegisterButtonClass = eventIsActive ? null : "upComingEvents__event-register--inActive";
 
         return (
-            <div className="upComingEvents">
+            <div className={`upComingEvents ${this.state.isLoaded ? "" : "upComingEvents--isLoading"}`}>
+                <PreLoader />
                 <section className="upComingEvents__box">
                     <div className={`upComingEvents__selected-event ${additionalClassForSelectedEvent}`}>
                         <h2 className="upComingEvents__event-title">{ currentEvent.title } </h2>

@@ -32,6 +32,12 @@ html {
   box-sizing: inherit;
 }
 
+// for selection color
+
+*::selection {
+  background: #fec10b;
+}
+
 /**
  * Basic styles for links
  */

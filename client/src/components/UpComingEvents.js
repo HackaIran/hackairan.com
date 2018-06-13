@@ -80,14 +80,11 @@ class UpComingEvents extends React.Component {
             if (event.timestamp < Date.now()) continue;
 
             const id = event.id;
-            const titleStyle = [
-                styles.eventItemTitle,
-                (id === this.state.selectedEvent) ? styles.eventItemTitleSelected : {}
-            ];
-            items.push(<li key={id} style={styles.eventItem} onClick={() => this.selectEvent(id)}>
-                <h3 key={'title' + id} style={titleStyle}>{ event.title }</h3>
-                <h4 style={styles.eventItemLocation}>{ event.location } / <b>{ event.city }</b></h4>
-                <time style={styles.eventItemDate}>{ event.dateLabel }</time>
+            const titleClass = (id === this.state.selectedEvent) ? "upComingEvents__aside-event-list-item-title--selected" : null
+            items.push(<li key={id} className="upComingEvents__aside-event-list-item" onClick={() => this.selectEvent(id)}>
+                <h3 key={'title' + id} className={`upComingEvents__aside-event-list-item-title ${titleClass}`}>{ event.title }</h3>
+                <h4 className="upComingEvents__aside-event-list-item-location">{ event.location } / <b>{ event.city }</b></h4>
+                <time className="upComingEvents__aside-event-list-item-date">{ event.dateLabel }</time>
             </li>)
         }
         return items;
@@ -107,39 +104,30 @@ class UpComingEvents extends React.Component {
                 description: '-',
                 registerLink: '-',
             }, this.getEvent(this.state.selectedEvent));
-        const additionalStyleForSelectedEvent = this.state.waiting ? {
-            opacity: 0,
-            transform: 'scale(1.03) translate(-10px, -10px)'
-        } : {};
+        const additionalClassForSelectedEvent = this.state.waiting ? '.upComingEvents__selected-event--additions' : null;
         const eventIsActive = currentEvent.timestamp >= Date.now();
-        const finalRegisterButtonStyle = [
-            styles.eventRegister, eventIsActive ? {} : {
-                background: 'rgb(122, 120, 116)',
-                color: '#474747',
-                pointerEvents: 'none'
-            }
-        ];
+        const finalRegisterButtonClass = eventIsActive ? null : "upComingEvents__event-register--inActive";
 
         return (
-            <div style={styles.container}>
-                <section style={styles.showBox}>
-                    <div style={[styles.selectedEvent, additionalStyleForSelectedEvent]}>
-                        <h2 style={styles.eventTitle}>{ currentEvent.title } </h2>
-                        <h3 style={styles.eventLocation}>{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
-                        <time style={styles.eventDate}>{ currentEvent.dateLabel }</time>
-                        <p style={styles.eventDescription}>{ currentEvent.description }</p>
-                        <a style={finalRegisterButtonStyle} href={ currentEvent.registerLink } target="_blank">
+            <div className="upComingEvents">
+                <section className="upComingEvents__box">
+                    <div className={`upComingEvents__selected-event ${additionalClassForSelectedEvent}`}>
+                        <h2 className="upComingEvents__event-title">{ currentEvent.title } </h2>
+                        <h3 className="upComingEvents__event-location">{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
+                        <time className="upComingEvents__event-date">{ currentEvent.dateLabel }</time>
+                        <p className="upComingEvents__event-description">{ currentEvent.description }</p>
+                        <a className={`upComingEvents__event-register ${finalRegisterButtonClass}`} href={ currentEvent.registerLink } target="_blank">
                             {eventIsActive ? 'Register' : 'Passed!'}
                         </a>
                     </div>
-                    <div className="timeline" style={styles.timeline}>
+                    <div className="upComingEvents__timeline">
                         { this.bars }
-                        <div className="now" style={styles.now} />
+                        <div className="upComingEvents__timeline-now" />
                     </div>
                 </section>
-                <aside style={styles.aside}>
+                <aside className="upComingEvents__aside">
                     <h2>upcoming events</h2>
-                    <ul style={styles.eventList}>{ this.eventList }</ul>
+                    <ul className="upComingEvents__aside-event-list">{ this.eventList }</ul>
                 </aside>
             </div>
         )
@@ -153,8 +141,7 @@ const styles = {
         marginTop: 0,
         marginBottom: 100,
         flexDirection: 'row',
-        color: 'white',
-        gridArea: 'timeline-start / 1 / timeline-end / -1'
+        color: 'white'
     },
     showBox: {
         flexGrow: 4,

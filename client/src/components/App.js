@@ -17,6 +17,8 @@ class App extends React.Component {
                 </Header>
                 <Events />
                 
+                <UpComingEvents />
+
                 <Products />
 
                 <Members />

@@ -1,0 +1,221 @@
+.upComingEvents{
+    display: flex;
+    min-height: 45rem;
+    margin-top: 0;
+    margin-bottom: 10rem;
+    flex-direction: row;
+    color: white;
+
+    .upComingEvents__box{
+        flex-grow: 4;
+        display: flex;
+        flex-direction: column;
+
+        .upComingEvents__selected-event{
+            flex-grow: 1;
+            padding: 4rem 6rem;
+            position: relative;
+            transition-duration: 0.3s;
+
+            &.upComingEvents__selected-event--additions{
+                opacity: 0;
+                transform: scale(1.03) translate(-10px, -10px);
+            }
+
+            .upComingEvents__event-title{
+                font-size: 3.5rem;
+                color: $highlight;
+            }
+
+            .upComingEvents__event-location{
+                font-weight: normal;
+                font-size: 1.6rem;
+                margin-top: 0.5rem;
+            }
+
+            .upComingEvents__event-date{
+                font-size: 1.9rem;
+                color: #888;
+                font-weight: bold;
+                margin-top: 1.5rem;
+                margin-bottom: 2.5rem;
+                display: block;
+            }
+
+            .upComingEvents__event-description{
+                font-size: 1.6rem;
+                font-weight: 100;
+                line-height: 2.5rem;
+
+                @media only screen and (max-width: 37.5rem){
+                    display: none;
+                }
+
+            }
+
+            .upComingEvents__event-register{
+                background: $highlight;
+                padding: 1.8rem 4.5rem;
+                font-size: 1.8rem;
+                color: black;
+                font-weight: bold;
+                text-decoration: none;
+                position: absolute;
+                top: 4.7rem;
+                right: 6rem;
+
+                &:hover{
+                    opacity: 0.9;
+                }
+
+                @media only screen and (max-width: 37.5rem){
+                    top: auto;
+                }
+
+                &.upComingEvents__event-register--inActive{
+
+                    background: rgb(122, 120, 116);
+                    color: #474747;
+                    pointer-events: none;
+
+                }
+
+            }
+
+        }
+
+        .upComingEvents__timeline{
+
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+            flex-basis: 15rem;
+            min-height: 15rem;
+            position: relative;
+
+            @import './sub-components/timeLineBar';
+
+            .upComingEvents__timeline-now{
+
+                background: $highlight;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 80%;
+                width: 2px;
+                pointer-events: none;
+
+                &:before {
+                    content: ' ';
+                    width: 50px;
+                    height: 30px;
+                    filter: blur(7px);
+                    background: #1d1d1d;
+                    position: absolute;
+                    display: block;
+                    z-index: 8;
+                    top: 50%;
+                    left: 50%;
+                    color: transparent;
+                    border-radius: 50% 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:after {
+                    content: 'now';
+                    position: absolute;
+                    z-index: 9;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #fec10b;
+                    text-shadow: 0 0 20px #333;
+                }
+
+            }
+
+        }
+
+    }
+
+    .upComingEvents__aside{
+
+        background: rgb(31, 31, 31);
+        flex-grow: 1;
+        padding: 4rem;
+        min-width: 40rem;
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (max-width: 65rem){
+            display: none;
+        }
+
+        .upComingEvents__aside-event-list{
+
+            list-style: none;
+            margin-top: 20;
+            overflow-y: auto;
+
+            .upComingEvents__aside-event-list-item{
+
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+                border-bottom: 0.2rem dotted #444;
+                position: relative;
+                cursor: pointer;
+                transition-duration: 0.2s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                &:active {
+                    opacity: 0.5;
+                }
+
+                .upComingEvents__aside-event-list-item-title{
+
+                    color: $highlight;
+                    margin-top: 1.5rem;
+                    user-select: none;
+
+                    &.upComingEvents__aside-event-list-item-title--selected{
+                        color: $highlight;
+                        pointer-events: none;
+                    }
+
+                }
+
+                .upComingEvents__aside-event-list-item-location{
+                    
+                    font-weight: 100;
+                    font-size: 1.3rem;
+                    margin-top: 1rem;
+                    margin-bottom: 1.5rem;
+                    user-select: none
+
+                }
+
+                .upComingEvents__aside-event-list-item-date{
+                    
+                    color: white;
+                    margin: 0;
+                    font-weight: 100;
+                    font-size: 1.5rem;
+                    padding: 0.5rem 1.3rem;
+                    background: #323232;
+                    border-radius: 20;
+                    position: absolute;
+                    top: 50%;
+                    right: 1rem;
+                    transform: translateY(-50%);
+                    user-select: none;
+
+                }
+            }
+
+        }
+
+    }
+
+}

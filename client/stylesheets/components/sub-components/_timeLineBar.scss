@@ -1,0 +1,65 @@
+.timeLineBar{
+    width: 0.2rem;
+    height: 20rem;
+    transform: translateX(-50%);
+    background: linear-gradient(transparent, #DDD);
+    position: absolute;
+    transition-duration: 0.3s;
+    bottom: -2rem;
+    pointer-events: none;
+
+    &.timeLineBar--inActive{
+        transform: scale(0.95);
+        opacity: 0.3;
+        cursor: pointer;
+        pointer-events: auto;
+
+        &:hover {
+            transform: scale(0.96);
+            opacity: 0.45;
+        }
+    }
+
+    .timeLineBar__downBar{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 4rem;
+        height: 0.2rem;
+        background: #DDD;
+        transform: translateX(-50%);
+
+        .timeLineBar__downBar-date{
+            font-weight: bold;
+            font-size: 2rem;
+            position: absolute;
+            bottom: -3.1rem;
+            left: 50%;
+            white-space: nowrap;
+            transform: translateX(-50%);
+        }
+
+        .timeLineBar__downBar-remaining{
+            font-size: 1.2rem;
+            position: absolute;
+            bottom: -5rem;
+            left: 50%;
+            white-space: nowrap;
+            color: #AAA;
+            transform: translateX(-50%);
+        }
+
+    }
+
+    .timeLineBar__clickArea{
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4.5rem;
+        height: 100%;
+        transform: translateX(-50%);
+
+    }
+
+}

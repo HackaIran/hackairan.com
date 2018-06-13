@@ -11,15 +11,16 @@ class TimelineBar extends React.Component {
         remaining += diffWithNow < 0 ? ' ago' : ' to go';
         if (diffWithNow === 0) remaining = 'today';
         const left = (diffWithNow / 60 * 50) + 50;
-        const containerStyle = [styles.container, {left: left + '%'}];
-        if (!this.props.active) containerStyle.push(styles.notActive);
+        const containerStyle = {left: left + '%'};
+        let containerClassNotActive = null;
+        if (!this.props.active) containerClassNotActive = "timeLineBar--inActive";
         return (
-            <div style={containerStyle} onClick={() => this.props.onClick()}>
-                <div style={styles.downBar}>
-                    <span style={styles.date}>{ date.format('ll').split(',')[0] }</span>
-                    <span style={styles.remaining}>{ remaining }</span>
+            <div className={`timeLineBar ${containerClassNotActive}`} style={containerStyle} onClick={() => this.props.onClick()}>
+                <div className="timeLineBar__downBar">
+                    <span className="timeLineBar__downBar-date">{ date.format('ll').split(',')[0] }</span>
+                    <span className="timeLineBar__downBar-remaining">{ remaining }</span>
                 </div>
-                <div style={styles.clickArea} />
+                <div className="timeLineBar__clickArea" />
             </div>
         )
     }

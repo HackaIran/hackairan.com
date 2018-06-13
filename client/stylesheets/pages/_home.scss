@@ -1,6 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.upComingEvents{
+    grid-area: timeline-start / 1 / timeline-end / -1;
+}
 .members{
     grid-area: team-start / 1 / team-end / -1;
 }

@@ -1,6 +1,12 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.event{
+    grid-area: events-start / 1 / events-end / -1;
+}
+.product{
+    grid-area: products-start / 1 / products-end / -1;
+}
 .upComingEvents{
     grid-area: timeline-start / 1 / timeline-end / -1;
 }

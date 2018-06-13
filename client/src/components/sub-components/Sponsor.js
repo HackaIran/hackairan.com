@@ -1,5 +1,3 @@
-import React from 'react'
-
 class Sponsor extends React.Component {
     render() {
         return (

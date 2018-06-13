@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Member from './sub-components/Member';
 
 class Members extends React.Component {

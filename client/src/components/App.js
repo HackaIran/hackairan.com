@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Header from './Header';
 import Events from './Events';
 import UpComingEvents from './UpComingEvents';

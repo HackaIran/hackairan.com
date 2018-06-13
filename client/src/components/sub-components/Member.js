@@ -1,5 +1,3 @@
-import React from 'react'
-
 class Member extends React.Component {
     render() {
         return (

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Event from './sub-components/Event';
 
 class Events extends React.Component {

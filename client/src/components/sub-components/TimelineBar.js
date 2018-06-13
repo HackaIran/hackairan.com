@@ -1,6 +1,3 @@
-import React from 'react'
-import moment from 'moment'
-
 class TimelineBar extends React.Component {
     render() {
         const date = moment(this.props.timestamp);

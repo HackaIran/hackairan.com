@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Product from './sub-components/Product';
 
 class Products extends React.Component {

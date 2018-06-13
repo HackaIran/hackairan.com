@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Sponsor from './sub-components/Sponsor';
 
 class Sponsors extends React.Component {

@@ -1,5 +1,3 @@
-import React from 'react'
-
 class PreLoader extends React.Component {
     render() {
         return (

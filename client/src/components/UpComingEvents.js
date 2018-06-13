@@ -1,5 +1,3 @@
-import React from 'react'
-
 import TimelineBar from './sub-components/TimelineBar'
 import PreLoader from './sub-components/PreLoader';
 

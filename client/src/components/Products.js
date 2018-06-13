@@ -6,9 +6,9 @@ import Product from './sub-components/Product';
 class Products extends React.Component {
     render() {
         return (
-            <section className="product">
+            <section className="products">
                 
-                <h2 className="product__header-title">
+                <h2 className="products__header-title">
                     Products, our <span className="highlight">prouds</span>!
                 </h2>
 

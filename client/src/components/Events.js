@@ -6,9 +6,9 @@ import Event from './sub-components/Event';
 class Events extends React.Component {
     render() {
         return (
-            <section className="event">
+            <section className="events">
                 
-                <h2 className="event__header-title">
+                <h2 className="events__header-title">
                     Events, our <span className="highlight">identity</span>!
                 </h2>
 

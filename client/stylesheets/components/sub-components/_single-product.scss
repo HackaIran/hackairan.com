@@ -12,10 +12,19 @@
 
     &:nth-of-type(odd){
 
-        .single-product__top-gradient{
+        .single-product__content-wrapper{
+
+            background: linear-gradient(to right, transparent, black 55%), url($base-url+'/images/eventBack.jpg');
             
-            background: linear-gradient(to right, white, black);
-    
+            background-position: left;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+        .single-product__description-wrapper{
+            margin-left: auto;
+            padding-right: 5rem;
         }
 
         .single-product__content-wrapper{
@@ -25,11 +34,23 @@
     }
 
     &:nth-of-type(even){
-        .single-product__top-gradient{
-            
-            background: linear-gradient(to left, white, black);
-    
+
+        .single-product__content-wrapper{
+
+            background:linear-gradient(to left, transparent, black 55%), url($base-url+'/images/eventBack.jpg');
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+
         }
+
+        .single-product__description-wrapper{
+            margin-right: auto;
+
+            padding-left: 5rem;
+
+        }
+
         .single-product__content-wrapper{
             flex-direction: row;
         }
@@ -39,43 +60,47 @@
     .single-product__content-wrapper{
         flex: 1;
         display: flex;
-
-        .single-product__image-wrapper{
-
-            padding: 1rem 0;
-
-            flex-basis: 40%;
-            height: auto;
-
-            display: flex;
-            align-items: center;
-
-            .single-product__image{
-                max-width: 100%;
-                width: auto;
-                height: auto;
-            }
-    
-        }
-
+        
         .single-product__description-wrapper{
-
-            flex: 1;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
+            width: 50%;
 
-            padding-left: 5rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
 
             &>h3{
-                font-size: 2.8rem;
+                font-size: 3.6rem;
                 margin-bottom: 0.5rem;
             }
 
+            
             &>p{
                 font-size: 1.8rem;
-                padding-left: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            &>.single-product__more-button{
+                align-self: flex-end;
+                background-color: $highlight;
+                color: black;
+                font-size: 1.7rem;
+                padding: 0.7rem 3rem;
+                transition-duration: 0.3s;
+                text-decoration: none;
+
+                &:active{
+                    transition-duration: 0.3s;
+                    transform: scale(0.95);
+                }
+
+                &:hover{
+                    transition-duration: 0.3s;
+                    background-color: darken($highlight, 15);
+                }
+
             }
 
         }

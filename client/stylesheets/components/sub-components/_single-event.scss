@@ -82,6 +82,19 @@
                 color: black;
                 font-size: 1.7rem;
                 padding: 0.7rem 3rem;
+                transition-duration: 0.3s;
+                text-decoration: none;
+
+                &:active{
+                    transition-duration: 0.3s;
+                    transform: scale(0.95);
+                }
+
+                &:hover{
+                    transition-duration: 0.3s;
+                    background-color: darken($highlight, 15);
+                }
+
             }
 
         }

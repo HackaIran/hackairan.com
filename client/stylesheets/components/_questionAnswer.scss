@@ -2,6 +2,8 @@
 
 .questionAnswer{
 
+    margin-top: 1rem;
+
     grid-column: 2 / 12;
 
     display: flex;
@@ -17,7 +19,7 @@
         border-bottom: 0.2rem solid $highlight;
 
         padding-bottom: 1.6rem;
-        padding-top: 0.6rem;
+        padding-top: 1.6rem;
 
         padding-right: 4rem;
 
@@ -31,7 +33,7 @@
 
         font-size: 2.4rem;
 
-        padding: 1rem 0;
+        padding: 1.6rem 0;
 
     }
 

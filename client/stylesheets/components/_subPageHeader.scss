@@ -1,0 +1,155 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the subPageHeader of the subpage.
+// -----------------------------------------------------------------------------
+.subPageHeader {
+    background: black;
+    width: 100%;
+    position: relative;
+    margin-top: -0.5rem;
+    overflow: hidden;
+
+    grid-area: header-start / 1 / header-end / -1;
+
+    background-image: linear-gradient(to bottom, transparent, black 100%), url('../assets/images/eventBack.JPG');
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 10rem;
+
+    &__main-name{
+
+        font-size: 7rem;
+        margin: 0;
+        padding: 0;
+
+        margin-top: 30vh;
+
+    }
+
+    &__made-with{
+        font-size: 2.6rem;
+        font-weight: 100;
+        display: flex;
+        margin-top: 0;
+        padding: 0;
+        &>a{
+            display: flex;
+            align-items: center;
+            height: 3.6rem;
+            &>img{
+                margin-left: 0.5rem;
+                height: 3.4rem;
+            }
+        }
+    }
+
+    &__enter-website{
+        background-color: $highlight;
+        color: black;
+        padding: 1rem 3rem;
+        margin: 1rem;
+        margin-top: auto;
+        font-size: 2.2rem;
+        font-weight: bold;
+        border-bottom: 0.4rem solid darken($highlight, 30);
+        position: relative;
+        transition-duration: 0.3s;
+        &:hover{
+            text-decoration: none;
+            color: black;
+            background-color: lighten($highlight, 5);
+            transition-duration: 0.3s;
+        }
+
+        &:active{
+            opacity: 0.8;
+            transition-duration: 0.3s;
+        }
+
+        &:active,&:visited,&:focus{
+            color: black;
+            text-decoration: none;
+        }
+        
+        &--soon:after {
+            content: 'soon';
+            background: lighten($highlight, 30);
+            position: absolute;
+            opacity: 0;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: black;
+            font-weight: 100;
+            font-size: 12px;
+            padding: 5px 8px;
+            border-radius: 3px;
+            transition-duration: 0.2s;
+        }
+        
+        &--soon:before {
+            content: ' ';
+            position: absolute;
+            opacity: 0;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-top-color: lighten($highlight, 30);
+            transition-duration: 0.2s;
+        }
+        
+        &--soon:hover:after {
+            opacity: 0.8;
+            top: -30px;
+        }
+        
+        &--soon:hover:before {
+            opacity: 0.7;
+            top: -6px;
+        }
+        
+
+    }
+
+    &__or-text{
+        color: gray;
+        font-size: 2.0rem;
+        margin-top: 1.5rem;
+    }
+
+    &__read-more-text{
+        font-size: 2.0rem;
+        margin-top: 1.5rem;
+        opacity: 0.8;
+    }
+
+    &__arrow-down{
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+
+    &__arrow-down:after, &__arrow-down:before {
+        content: ' ';
+        position: absolute;
+        width: 1.5rem;
+        height: 0.2rem;
+        border-radius: 1rem;
+        background: white;
+    }
+    &__arrow-down:after {
+        transform: translate(-50%, -50%) rotate(45deg) translateX(-50%) translateX(1px);
+    }
+    &__arrow-down:before {
+        transform: translate(-50%, -50%) rotate(-45deg) translateX(50%) translateX(-1px);
+    }
+
+}

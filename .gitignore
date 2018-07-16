@@ -1,7 +1,6 @@
 /node_modules
 /public/hot
 /public/storage
-/public/assets
 /storage/*.key
 /vendor
 /.idea
@@ -12,5 +11,4 @@ npm-debug.log
 yarn-error.log
 .env
 .DS_Store
-/dist/assets
 /dist/javascripts/bundle.js

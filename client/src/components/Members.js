@@ -8,12 +8,12 @@ class Members extends React.Component {
             members: [{
                 username: 'alirezasheikholmolouki',
                 name: 'Alireza Sheikholmolouki',
-                description: 'Co-Founder & Tech Manager',
+                description: 'Co-Founder & Tech Director',
                 socials:{}
             }, {
                 username: 'shayansabery',
                 name: 'Shayan Sabery',
-                description: 'Co-Founder & Event Manager',
+                description: 'Co-Founder & Event Director',
                 socials:{}
             }, {
                 username: 'alishahabbasi',

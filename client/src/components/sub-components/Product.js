@@ -3,7 +3,7 @@ class Product extends React.Component {
 
         const orderClass = this.props.order ? 'odd' : 'even';
 
-        const background = (this.props.order ? 'linear-gradient(to right, transparent, black 55%)' : 'linear-gradient(to left, transparent, black 55%)') + `, url('${this.props.image}')`
+        const backgroundImage = (this.props.order ? 'linear-gradient(to right, transparent, black 55%)' : 'linear-gradient(to left, transparent, black 55%)') + `, url('${this.props.image}')`
 
         return (
 
@@ -11,7 +11,7 @@ class Product extends React.Component {
 
                 <div className="single-product__top-gradient" />
 
-                <div className="single-product__content-wrapper" style={{background}}>
+                <div className="single-product__content-wrapper" style={{backgroundImage}}>
 
                     <div className="single-product__description-wrapper">
                         <h3 className="single-product__description-title">

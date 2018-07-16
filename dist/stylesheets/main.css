@@ -4,7 +4,8 @@
  */
 html {
   box-sizing: border-box;
-  font-size: calc(100% * 0.625); }
+  font-size: calc(100% * 0.625);
+  background: #000; }
 
 /**
  * Remove margins and paddings of the body
@@ -268,33 +269,33 @@ body {
     min-height: 20rem;
     display: flex;
     flex-direction: column; }
-    .events .single-event:nth-of-type(odd) .single-event__content-wrapper {
+    .events .single-event.odd .single-event__content-wrapper {
       background: linear-gradient(to right, transparent, black 55%), url("/assets//images/eventBack.jpg");
       background-position: left;
       background-size: 100% auto;
       background-repeat: no-repeat;
       transition-duration: 0.3s; }
-      .events .single-event:nth-of-type(odd) .single-event__content-wrapper:hover {
+      .events .single-event.odd .single-event__content-wrapper:hover {
         transition-duration: 0.3s;
         background-size: 105% auto; }
-    .events .single-event:nth-of-type(odd) .single-event__description-wrapper {
+    .events .single-event.odd .single-event__description-wrapper {
       margin-left: auto;
       padding-right: 6rem; }
-    .events .single-event:nth-of-type(odd) .single-event__content-wrapper {
+    .events .single-event.odd .single-event__content-wrapper {
       flex-direction: row-reverse; }
-    .events .single-event:nth-of-type(even) .single-event__content-wrapper {
+    .events .single-event.even .single-event__content-wrapper {
       background: linear-gradient(to left, transparent, black 55%), url("/assets//images/eventBack.jpg");
       background-position: right;
       background-size: 100% auto;
       background-repeat: no-repeat;
       transition-duration: 0.3s; }
-      .events .single-event:nth-of-type(even) .single-event__content-wrapper:hover {
+      .events .single-event.even .single-event__content-wrapper:hover {
         transition-duration: 0.3s;
         background-size: 105% auto; }
-    .events .single-event:nth-of-type(even) .single-event__description-wrapper {
+    .events .single-event.even .single-event__description-wrapper {
       margin-right: auto;
       padding-left: 6rem; }
-    .events .single-event:nth-of-type(even) .single-event__content-wrapper {
+    .events .single-event.even .single-event__content-wrapper {
       flex-direction: row; }
     .events .single-event .single-event__content-wrapper {
       flex: 1; }
@@ -342,33 +343,33 @@ body {
     .products .single-product .single-product__top-gradient {
       flex-basis: 0.2rem;
       width: 100%; }
-    .products .single-product:nth-of-type(odd) .single-product__content-wrapper {
+    .products .single-product.odd .single-product__content-wrapper {
       background: linear-gradient(to right, transparent, black 55%), url("/assets//images/eventBack.jpg");
       background-position: left;
       background-size: 100% auto;
       background-repeat: no-repeat;
       transition-duration: 0.3s; }
-      .products .single-product:nth-of-type(odd) .single-product__content-wrapper:hover {
+      .products .single-product.odd .single-product__content-wrapper:hover {
         transition-duration: 0.3s;
         background-size: 105% auto; }
-    .products .single-product:nth-of-type(odd) .single-product__description-wrapper {
+    .products .single-product.odd .single-product__description-wrapper {
       margin-left: auto;
       padding-right: 6rem; }
-    .products .single-product:nth-of-type(odd) .single-product__content-wrapper {
+    .products .single-product.odd .single-product__content-wrapper {
       flex-direction: row-reverse; }
-    .products .single-product:nth-of-type(even) .single-product__content-wrapper {
+    .products .single-product.even .single-product__content-wrapper {
       background: linear-gradient(to left, transparent, black 55%), url("/assets//images/eventBack.jpg");
       background-position: right;
       background-size: 100% auto;
       background-repeat: no-repeat;
       transition-duration: 0.3s; }
-      .products .single-product:nth-of-type(even) .single-product__content-wrapper:hover {
+      .products .single-product.even .single-product__content-wrapper:hover {
         transition-duration: 0.3s;
         background-size: 105% auto; }
-    .products .single-product:nth-of-type(even) .single-product__description-wrapper {
+    .products .single-product.even .single-product__description-wrapper {
       margin-right: auto;
       padding-left: 6rem; }
-    .products .single-product:nth-of-type(even) .single-product__content-wrapper {
+    .products .single-product.even .single-product__content-wrapper {
       flex-direction: row; }
     .products .single-product .single-product__content-wrapper {
       flex: 1;
@@ -682,7 +683,7 @@ body {
           display: none; } }
       .upComingEvents .upComingEvents__wrapper .upComingEvents__aside .upComingEvents__aside-event-list {
         list-style: none;
-        margin-top: 20;
+        padding: 0;
         overflow-y: auto; }
         .upComingEvents .upComingEvents__wrapper .upComingEvents__aside .upComingEvents__aside-event-list .upComingEvents__aside-event-list-item {
           padding-bottom: 1rem;

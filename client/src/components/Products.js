@@ -12,7 +12,7 @@ class Products extends React.Component {
 
                 <Product link={`/nerdpitch`} desc={ `NerdPitch is an innovative way of representing knowledge and ideas. As the name indicates, it’s a robust way which helps nerds and geeks to disseminate information throughout the world in an interactive way. We have embedded convenient tools within the platform which facilitates the process of creating presentations.` } title='Nerdpitch' />
 
-                <Product link={`/hope`} desc={ `HOPE; Hackademy Open-Source Projects Evaluator is an evaluator platform which checks the VCS repository of projects and give an insight over their health; It looks for certain files and global standard metrics within projects and scores them based on their rate of standardization.` } title='HOPE' />
+                <Product link={`/hope`} image={'assets/images/hope-cover.jpg'} desc={ `HOPE; Hackademy Open-Source Projects Evaluator is an evaluator platform which checks the VCS repository of projects and give an insight over their health; It looks for certain files and global standard metrics within projects and scores them based on their rate of standardization.` } title='HOPE' />
 
             </section>
         )

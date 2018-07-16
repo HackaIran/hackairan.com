@@ -1,6 +1,5 @@
 class Event extends React.Component {
     render() {
-        console.log(this.props.image);
         return (
 
             <div className="single-event">

@@ -7,7 +7,7 @@ class Events extends React.Component {
             <section className="events">
                 
                 <h2 className="events__header-title">
-                    Events, our <span className="highlight">identity!</span>
+                    Our Events, our <span className="highlight">identity!</span>
                 </h2>
 
                 <Event link={`/hackateamup`} desc={`HackaTeamup is a quarterly programming contest with the main purpose of introducing developers to the world’s cutting-edge technological trends and building a powerful community amongst developers. At the end of each contest everyone will gather, interact with the other members of the community and get a free pizza.`} image='assets/images/eventBack.jpg' title='Hacka' highlight='Teamup' />

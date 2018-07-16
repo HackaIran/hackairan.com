@@ -2,13 +2,15 @@ class Header extends React.Component {
 
     constructor (props) {
         super();
-        window.addEventListener('load', () => this.refs.video.play())
+        window.addEventListener('load', () => {
+            document.querySelector('video').play();
+        })
     }
 
     render() {
         return (
             <header className="header">
-                <video ref="video" className="header__video" src="./assets/videos/header.mp4" autoPlay={true} loop={true} />
+                <video className="header__video" src="./assets/videos/header.mp4" autoPlay={true} loop={true} />
                 <div className="header__gradient" />
                 <div className="header__content-wrapper">
                     <img className="header__logo" src="./assets/images/hacka_white.png" alt="Hacka{Iran}"/>

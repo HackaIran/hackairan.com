@@ -31,7 +31,7 @@ class Members extends React.Component {
                 description: 'R&D Director',
                 socials:{}
             },{
-                username: 'goudarz',
+                username: 'goudarzfiroozi',
                 name: 'Goudarz Firoozi',
                 description: 'Finance Director',
                 socials:{}

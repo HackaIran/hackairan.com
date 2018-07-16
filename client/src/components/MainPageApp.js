@@ -9,7 +9,7 @@ import ProgressBar from './ProgressBar';
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <div className='mainPage'>
 
                 <ProgressBar />
 

@@ -1,0 +1,24 @@
+.goDownAnimation{
+    animation-name: goDown;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes goDown{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    33%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    66%{
+        transform: translateY(3rem);
+        opacity: 0.8;
+    } 
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

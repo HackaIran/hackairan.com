@@ -18,26 +18,17 @@ class UpComingEvents extends React.Component {
     }
 
     fetchEvents () {
+
         const events = [
             {
                 id: 0,
-                title: 'MiniHacka 1',
-                location: 'Payame Noor University',
+                title: 'HackaTeamup{Karaj} 4',
+                location: 'Startup House of Karaj',
                 city: 'Karaj, Iran',
-                dateLabel: 'Nov 26 - 05 Azar',
-                timestamp: 1511708400000,
-                description: 'MiniHacka is a smaller-sized Hacka event that is held for the purpose of preparation and networking for the original match.',
-                registerLink: 'https://evand.com/events/minihackakaraj1'
-            },
-            {
-                id: 1,
-                title: 'Hacka{Karaj} 3',
-                location: 'Pardis',
-                city: 'Karaj, Iran',
-                dateLabel: 'Feb 02 - 13 Bahman',
-                timestamp: 1517567400000,
-                description: 'In previous version of Hacka(in Karaj) the competitors observed some technical changes and the arrangements for Hacademy were made. In current version, another part of Hacka starts growing: Communication, the part which we created Hacka for.',
-                registerLink: 'https://evand.com/hackakaraj'
+                dateLabel: 'Jul 20 - Tir 29',
+                timestamp: 1532095200000,
+                description: 'In our very first anniversary, we have two surprises, first for open-source lovers, and the second one is for real challengers! Attendees will take their first steps towards a cutting-edge technology trend.',
+                registerLink: 'https://evand.com/events/HackaIran'
             }
         ];
         events.sort((a, b) => a.timestamp < b.timestamp ? -1 : 1);
@@ -109,25 +100,31 @@ class UpComingEvents extends React.Component {
         return (
             <div className={`upComingEvents ${this.state.isLoaded ? "" : "upComingEvents--isLoading"}`}>
                 <PreLoader />
-                <section className="upComingEvents__box">
-                    <div className={`upComingEvents__selected-event ${additionalClassForSelectedEvent}`}>
-                        <h2 className="upComingEvents__event-title">{ currentEvent.title } </h2>
-                        <h3 className="upComingEvents__event-location">{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
-                        <time className="upComingEvents__event-date">{ currentEvent.dateLabel }</time>
-                        <p className="upComingEvents__event-description">{ currentEvent.description }</p>
-                        <a className={`upComingEvents__event-register ${finalRegisterButtonClass}`} href={ currentEvent.registerLink } target="_blank">
-                            {eventIsActive ? 'Register' : 'Passed!'}
-                        </a>
-                    </div>
-                    <div className="upComingEvents__timeline">
-                        { this.bars }
-                        <div className="upComingEvents__timeline-now" />
-                    </div>
-                </section>
-                <aside className="upComingEvents__aside">
-                    <h2>upcoming events</h2>
-                    <ul className="upComingEvents__aside-event-list">{ this.eventList }</ul>
-                </aside>
+                <h2 className="upComingEvents__header-title">
+                    Upcoming <span className="highlight">events</span>
+                </h2>
+                <div className="upComingEvents__wrapper">
+                    
+                    <section className="upComingEvents__box">
+                        <div className={`upComingEvents__selected-event ${additionalClassForSelectedEvent}`}>
+                            <h2 className="upComingEvents__event-title">{ currentEvent.title } </h2>
+                            <h3 className="upComingEvents__event-location">{ currentEvent.location } / <b>{ currentEvent.city }</b></h3>
+                            <time className="upComingEvents__event-date">{ currentEvent.dateLabel }</time>
+                            <p className="upComingEvents__event-description">{ currentEvent.description }</p>
+                            <a className={`upComingEvents__event-register ${finalRegisterButtonClass}`} href={ currentEvent.registerLink } target="_blank">
+                                {eventIsActive ? 'Register' : 'Passed!'}
+                            </a>
+                        </div>
+                        <div className="upComingEvents__timeline">
+                            { this.bars }
+                            <div className="upComingEvents__timeline-now" />
+                        </div>
+                    </section>
+                    <aside className="upComingEvents__aside">
+                        <h2>upcoming events</h2>
+                        <ul className="upComingEvents__aside-event-list">{ this.eventList }</ul>
+                    </aside>
+                </div>
             </div>
         )
     }

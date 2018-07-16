@@ -17,14 +17,20 @@
             background: linear-gradient(to right, transparent, black 55%), url($base-url+'/images/eventBack.jpg');
             
             background-position: left;
-            background-size: contain;
+            background-size: 100% auto;
             background-repeat: no-repeat;
+            transition-duration: 0.3s;
+
+            &:hover{
+                transition-duration: 0.3s;
+                background-size: 105% auto;
+            }
 
         }
 
         .single-product__description-wrapper{
             margin-left: auto;
-            padding-right: 5rem;
+            padding-right: 6rem;
         }
 
         .single-product__content-wrapper{
@@ -39,15 +45,22 @@
 
             background:linear-gradient(to left, transparent, black 55%), url($base-url+'/images/eventBack.jpg');
             background-position: right;
-            background-size: contain;
+            background-size: 100% auto;
             background-repeat: no-repeat;
+
+            transition-duration: 0.3s;
+
+            &:hover{
+                transition-duration: 0.3s;
+                background-size: 105% auto;
+            }
 
         }
 
         .single-product__description-wrapper{
             margin-right: auto;
 
-            padding-left: 5rem;
+            padding-left: 6rem;
 
         }
 
@@ -69,7 +82,7 @@
             width: 50%;
 
             padding-top: 5rem;
-            padding-bottom: 5rem;
+            padding-bottom: 6rem;
 
             &>h3{
                 font-size: 3.6rem;

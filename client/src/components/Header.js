@@ -7,9 +7,9 @@ class Header extends React.Component {
                 <div className="header__content-wrapper">
                     <img className="header__logo" src="./assets/images/hacka_white.png" alt="Hacka{Iran}"/>
                     <h1 className="header__title">Hacka<span className="highlight">{'{Iran}'}</span></h1>
-                    <p className="header__description">{`Hacka{Iran} is a non-profit local community of technologists. Our vision is to become Iran's leading futuristic services provider.`}</p>
+                    <p className="header__description">{`Hacka{Iran} is a local community of technologists. Our vision is to become Iran's leading futuristic services provider.`}</p>
                 </div>
-                <div className="header__arrow-down" />
+                <div className="header__arrow-down goDownAnimation" />
             </header>
         )
     }

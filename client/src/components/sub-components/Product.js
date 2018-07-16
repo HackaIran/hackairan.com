@@ -18,7 +18,7 @@ class Product extends React.Component {
                         <p className="single-product__description">
                             {this.props.desc}
                         </p>
-                        <a href="#" target="_blank" className="single-product__more-button">
+                        <a href={this.props.link} target="_blank" className="single-product__more-button">
                             See Through
                         </a>
                     </div>

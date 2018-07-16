@@ -9,6 +9,20 @@ router.get('/', HomeController.showIndex);
 
 // Get hacka parts
 
-router.get('/:name', HomeController.showHackaPart);
+router.get('/hackademy', (req, res)=>{
+    res.render('subPage', {
+        title: 'Hackademy',
+        prefix: 'Hacka',
+        suffix: 'demy'
+    });
+});
+
+router.get('/hackateamup', (req, res)=>{
+    res.render('subPage', {
+        title: 'HackaTeamup',
+        prefix: 'Hacka',
+        suffix: 'Teamup'
+    });
+});
 
 module.exports = router;

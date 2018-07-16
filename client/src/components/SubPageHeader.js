@@ -4,7 +4,7 @@ class Header extends React.Component {
             <header className="subPageHeader">
                 
                 <h1 className='subPageHeader__main-name'>
-                    Hacka<span className='highlight'>demy</span>
+                    {window.title.prefix}<span className='highlight'>{window.title.suffix}</span>
                 </h1>
 
                 <h3 className='subPageHeader__made-with'>
@@ -12,7 +12,7 @@ class Header extends React.Component {
                 </h3>
 
                 <a target="_blank" href='#' className='subPageHeader__enter-website subPageHeader__enter-website--soon'>
-                    Enter Hackademy's website
+                    Enter {window.title.title}'s website
                 </a>
 
                 <span className='subPageHeader__or-text'>- or -</span>
@@ -21,7 +21,7 @@ class Header extends React.Component {
                     read more about it
                 </span>
 
-                <div className='subPageHeader__arrow-down'>
+                <div className='subPageHeader__arrow-down goDownAnimation'>
 
                 </div>
 

@@ -17,7 +17,7 @@ class Event extends React.Component {
                         <p className="single-event__description">
                             {this.props.desc}
                         </p>
-                        <a href="#" target="_blank" className="single-event__more-button">
+                        <a href={this.props.link} target="_blank" className="single-event__more-button">
                             See Through
                         </a>
                     </div>

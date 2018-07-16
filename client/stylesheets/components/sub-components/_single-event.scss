@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
 
-    &:nth-of-type(odd){
+    &.odd{
 
         .single-event__content-wrapper{
 
@@ -35,7 +35,7 @@
 
     }
 
-    &:nth-of-type(even){
+    &.even{
 
         .single-event__content-wrapper{
 

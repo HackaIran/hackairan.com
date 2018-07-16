@@ -10,7 +10,7 @@
         width: 100%;
     }
 
-    &:nth-of-type(odd){
+    &.odd{
 
         .single-product__content-wrapper{
 
@@ -39,7 +39,7 @@
 
     }
 
-    &:nth-of-type(even){
+    &.even{
 
         .single-product__content-wrapper{
 

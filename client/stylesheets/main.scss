@@ -16,18 +16,19 @@
 
 // 4. Layout-related sections
 @import
-  'layout/layout',
-  'layout/header';
+  'layout/layout';
 
 // 5. Components
 @import
+  'components/header',
   'components/preloader',
   'components/events',
   'components/products',
   'components/members',
   'components/sponsors',
   'components/ProgressBar',
-  'components/upComingEvents';
+  'components/upComingEvents',
+  'components/subPageHeader';
 
 // 6. Page-specific styles
 @import

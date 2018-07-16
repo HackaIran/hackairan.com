@@ -26,6 +26,11 @@ class Members extends React.Component {
                 description: 'Developer and IT Consults',
                 socials:{}
             }, {
+                username: 'mohammad',
+                name: 'Mohammad H.Shahin',
+                description: 'R&D Director',
+                socials:{}
+            }, {
                 username: 'pouyasedighi',
                 name: 'Pouya Sedighi',
                 description: 'Social Media Manager',

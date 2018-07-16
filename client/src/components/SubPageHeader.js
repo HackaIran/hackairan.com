@@ -11,7 +11,7 @@ class Header extends React.Component {
                     made in <a href=""><img src='./assets/images/hacka_white.png' /></a>
                 </h3>
 
-                <a target="_blank" href='#' className='subPageHeader__enter-website subPageHeader__enter-website--soon'>
+                <a target="_blank" className='subPageHeader__enter-website subPageHeader__enter-website--soon'>
                     Enter {window.title.title}'s website
                 </a>
 

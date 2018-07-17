@@ -1,7 +1,7 @@
-FROM node:latest
+# Maintainer : Mohammad H. Shahin
+# github.com/mhshahin
 
-LABEL Mainainer: Mohammad H. Shahin \
-	github.com/mhshahin
+FROM node:latest
 
 RUN cd /home/node && \
 	git clone https://github.com/HackaIran/hackairan.com.git && \

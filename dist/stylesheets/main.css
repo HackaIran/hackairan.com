@@ -169,6 +169,10 @@ body {
     font-size: 1.8rem;
     font-weight: 100;
     line-height: 2.5rem; }
+    @media screen and (max-width: 750px) {
+      .header .header__description {
+        padding-right: 20px;
+        padding-left: 20px; } }
   .header .header__arrow-down {
     position: absolute;
     bottom: 16%;
@@ -299,6 +303,9 @@ body {
       flex-direction: row; }
     .events .single-event .single-event__content-wrapper {
       flex: 1; }
+      @media screen and (max-width: 750px) {
+        .events .single-event .single-event__content-wrapper {
+          background-size: cover !important; } }
       .events .single-event .single-event__content-wrapper .single-event__description-wrapper {
         display: flex;
         flex-direction: column;
@@ -306,12 +313,28 @@ body {
         width: 50%;
         padding-top: 5rem;
         padding-bottom: 6rem; }
+        @media screen and (max-width: 750px) {
+          .events .single-event .single-event__content-wrapper .single-event__description-wrapper {
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-size: cover; } }
         .events .single-event .single-event__content-wrapper .single-event__description-wrapper > h3 {
           font-size: 3.8rem;
           margin-bottom: 0rem; }
+          @media screen and (max-width: 750px) {
+            .events .single-event .single-event__content-wrapper .single-event__description-wrapper > h3 {
+              font-size: 46px;
+              text-align: center; } }
         .events .single-event .single-event__content-wrapper .single-event__description-wrapper > p {
           font-size: 1.8rem;
           margin-top: 1rem; }
+          @media screen and (max-width: 750px) {
+            .events .single-event .single-event__content-wrapper .single-event__description-wrapper > p {
+              text-shadow: 0 0 30px #000;
+              padding: 20px;
+              margin-bottom: 20px;
+              line-height: 29px; } }
         .events .single-event .single-event__content-wrapper .single-event__description-wrapper > .single-event__more-button {
           align-self: flex-end;
           background-color: #fec10b;
@@ -320,6 +343,10 @@ body {
           padding: 0.7rem 3rem;
           transition-duration: 0.3s;
           text-decoration: none; }
+          @media screen and (max-width: 750px) {
+            .events .single-event .single-event__content-wrapper .single-event__description-wrapper > .single-event__more-button {
+              align-self: center;
+              padding: 17px 40px; } }
           .events .single-event .single-event__content-wrapper .single-event__description-wrapper > .single-event__more-button:active {
             transition-duration: 0.3s;
             transform: scale(0.95); }
@@ -374,6 +401,9 @@ body {
     .products .single-product .single-product__content-wrapper {
       flex: 1;
       display: flex; }
+      @media screen and (max-width: 750px) {
+        .products .single-product .single-product__content-wrapper {
+          background-size: cover !important; } }
       .products .single-product .single-product__content-wrapper .single-product__description-wrapper {
         display: flex;
         flex-direction: column;
@@ -381,12 +411,28 @@ body {
         width: 50%;
         padding-top: 5rem;
         padding-bottom: 6rem; }
+        @media screen and (max-width: 750px) {
+          .products .single-product .single-product__content-wrapper .single-product__description-wrapper {
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-size: cover; } }
         .products .single-product .single-product__content-wrapper .single-product__description-wrapper > h3 {
           font-size: 3.6rem;
           margin-bottom: 0.5rem; }
+          @media screen and (max-width: 750px) {
+            .products .single-product .single-product__content-wrapper .single-product__description-wrapper > h3 {
+              font-size: 46px;
+              text-align: center; } }
         .products .single-product .single-product__content-wrapper .single-product__description-wrapper > p {
           font-size: 1.8rem;
           margin-top: 1rem; }
+          @media screen and (max-width: 750px) {
+            .products .single-product .single-product__content-wrapper .single-product__description-wrapper > p {
+              text-shadow: 0 0 30px #000;
+              padding: 20px;
+              margin-bottom: 20px;
+              line-height: 29px; } }
         .products .single-product .single-product__content-wrapper .single-product__description-wrapper > .single-product__more-button {
           align-self: flex-end;
           background-color: #fec10b;
@@ -395,6 +441,10 @@ body {
           padding: 0.7rem 3rem;
           transition-duration: 0.3s;
           text-decoration: none; }
+          @media screen and (max-width: 750px) {
+            .products .single-product .single-product__content-wrapper .single-product__description-wrapper > .single-product__more-button {
+              align-self: center;
+              padding: 17px 40px; } }
           .products .single-product .single-product__content-wrapper .single-product__description-wrapper > .single-product__more-button:active {
             transition-duration: 0.3s;
             transform: scale(0.95); }
@@ -542,12 +592,18 @@ body {
         padding: 4rem 6rem;
         position: relative;
         transition-duration: 0.3s; }
+        @media screen and (max-width: 500px) {
+          .upComingEvents .upComingEvents__wrapper .upComingEvents__box .upComingEvents__selected-event {
+            padding: 20px 30px; } }
         .upComingEvents .upComingEvents__wrapper .upComingEvents__box .upComingEvents__selected-event.upComingEvents__selected-event--additions {
           opacity: 0;
           transform: scale(1.03) translate(-10px, -10px); }
         .upComingEvents .upComingEvents__wrapper .upComingEvents__box .upComingEvents__selected-event .upComingEvents__event-title {
           font-size: 3.5rem;
           color: #fec10b; }
+          @media screen and (max-width: 500px) {
+            .upComingEvents .upComingEvents__wrapper .upComingEvents__box .upComingEvents__selected-event .upComingEvents__event-title {
+              font-size: 26px; } }
         .upComingEvents .upComingEvents__wrapper .upComingEvents__box .upComingEvents__selected-event .upComingEvents__event-location {
           font-weight: normal;
           font-size: 1.6rem;
@@ -590,6 +646,9 @@ body {
         flex-basis: 15rem;
         min-height: 15rem;
         position: relative; }
+        @media only screen and (max-width: 37.5rem) {
+          .upComingEvents .upComingEvents__wrapper .upComingEvents__box .upComingEvents__timeline {
+            margin-top: 50px; } }
         .upComingEvents .upComingEvents__wrapper .upComingEvents__box .upComingEvents__timeline .timeLineBar {
           width: 0.2rem;
           height: 20rem;
@@ -739,8 +798,10 @@ body {
   .subPageHeader__main-name {
     font-size: 7rem;
     margin: 0;
-    padding: 0;
     margin-top: 30vh; }
+    @media screen and (max-width: 400px) {
+      .subPageHeader__main-name {
+        font-size: 50px; } }
   .subPageHeader__made-with {
     font-size: 2.6rem;
     font-weight: 100;

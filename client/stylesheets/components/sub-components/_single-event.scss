@@ -69,7 +69,23 @@
     .single-event__content-wrapper{
         flex: 1;
 
+        @media screen and (max-width: 750px) {
+
+            background-size: cover!important;
+
+        }
+
         .single-event__description-wrapper{
+
+            @media screen and (max-width: 750px) {
+            
+                width: 100%;
+                padding-right: 20px;
+                padding-left: 20px;
+
+                background-size: cover;
+    
+            }
 
             display: flex;
             flex-direction: column;
@@ -82,11 +98,26 @@
             &>h3{
                 font-size: 3.8rem;
                 margin-bottom: 0rem;
+
+                @media screen and (max-width: 750px) {
+                    font-size: 46px;
+                    text-align: center;
+                }
+
             }
 
             &>p{
                 font-size: 1.8rem;
                 margin-top: 1rem;
+
+                @media screen and (max-width: 750px) {
+                    text-shadow: 0 0 30px #000;
+                    padding: 20px;
+                    margin-bottom: 20px;
+
+                    line-height: 29px;
+                }
+
             }
 
             &>.single-event__more-button{
@@ -97,6 +128,11 @@
                 padding: 0.7rem 3rem;
                 transition-duration: 0.3s;
                 text-decoration: none;
+
+                @media screen and (max-width: 750px) {
+                    align-self: center;
+                    padding: 17px 40px;
+                }
 
                 &:active{
                     transition-duration: 0.3s;

@@ -53,6 +53,12 @@
                 padding: 4rem 6rem;
                 position: relative;
                 transition-duration: 0.3s;
+
+                @media screen and (max-width: 500px) {
+            
+                    padding: 20px 30px;
+            
+                }
     
                 &.upComingEvents__selected-event--additions{
                     opacity: 0;
@@ -60,6 +66,13 @@
                 }
     
                 .upComingEvents__event-title{
+
+                    @media screen and (max-width: 500px) {
+            
+                        font-size: 26px;
+                
+                    }
+
                     font-size: 3.5rem;
                     color: $highlight;
                 }
@@ -122,6 +135,10 @@
             }
     
             .upComingEvents__timeline{
+
+                @media only screen and (max-width: 37.5rem){
+                    margin-top: 50px;
+                }
     
                 background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
                 flex-basis: 15rem;

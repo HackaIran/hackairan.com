@@ -23,9 +23,12 @@
 
         font-size: 7rem;
         margin: 0;
-        padding: 0;
 
         margin-top: 30vh;
+
+        @media screen and (max-width: 400px) {
+            font-size: 50px;
+        }
 
     }
 

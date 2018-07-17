@@ -9,9 +9,10 @@
     "start:watch": "nodemon ./bin/www",
     "bundle": "webpack",
     "bundle:watch": "webpack --watch",
-    "production:start": "pm2 start ./bin/www --name nerdpitch",
-    "production:restart": "pm2 restart nerdpitch",
-    "production:stop": "pm2 stop nerdpitch",
+    "production:start": "pm2 start ./bin/www --name hackairan.com",
+    "production:restart": "pm2 restart hackairan.com",
+    "production:stop": "pm2 stop hackairan.com",
+    "production:delete": "pm2 delete hackairan.com",
     "pull": "git pull && npm run production:restart"
   },
   "author": "HackaDevTeam",

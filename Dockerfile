@@ -1,5 +1,8 @@
 FROM node:latest
 
+LABEL Mainainer: Mohammad H. Shahin \
+	github.com/mhshahin
+
 RUN cd /home/node && \
 	git clone https://github.com/HackaIran/hackairan.com.git && \
 	mv hackairan.com/* . && \

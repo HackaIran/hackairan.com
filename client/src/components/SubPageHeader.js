@@ -1,5 +1,14 @@
 class Header extends React.Component {
     render() {
+
+        let soonClass;
+
+        if(window.title.website == ''){
+            soonClass = ' subPageHeader__enter-website--soon';
+        }else{
+            soonClass = '';
+        }   
+
         return (
             <header className="subPageHeader">
                 
@@ -8,10 +17,10 @@ class Header extends React.Component {
                 </h1>
 
                 <h3 className='subPageHeader__made-with'>
-                    made in <a href=""><img src='./assets/images/hacka_white.png' /></a>
+                    made in <a href="http://hackairan.com/"><img src='./assets/images/hacka_white.png' /></a>
                 </h3>
 
-                <a target="_blank" className='subPageHeader__enter-website subPageHeader__enter-website--soon'>
+                <a href={`${window.title.website}`} target="_blank" className={`subPageHeader__enter-website${soonClass}`}>
                     Enter {window.title.title}'s website
                 </a>
 

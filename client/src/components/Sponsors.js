@@ -17,8 +17,8 @@ class Sponsors extends React.Component {
                     link: 'http://pardis.ir/'
                 },
                 {
-                    name: 'Tab30',
-                    image: 'tab30.png',
+                    name: 'Tap30',
+                    image: 'tap30.png',
                     link: 'https://tap30.ir/'
                 }
             ]

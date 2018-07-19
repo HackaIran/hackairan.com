@@ -28,7 +28,7 @@ class UpComingEvents extends React.Component {
                 dateLabel: 'Jul 20 - Tir 29',
                 timestamp: 1532095200000,
                 description: 'In our very first anniversary, we have two surprises, first for open-source lovers, and the second one is for real challengers! Attendees will take their first steps towards a cutting-edge technology trend.',
-                registerLink: 'https://evand.com/events/HackaIran'
+                registerLink: 'https://evand.com/HackaIran'
             }
         ];
         events.sort((a, b) => a.timestamp < b.timestamp ? -1 : 1);

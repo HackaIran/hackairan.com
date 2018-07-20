@@ -8,12 +8,12 @@ class QASection extends React.Component {
         const QAData = [
             {
                 question: "What is Hackademy?",
-                answer: "It is none of your business.",
+                answer: "We will introduce it sOon;)",
                 afterImage: "assets/images/eventBack.jpg"
             },
             {
                 question: "What is Hackademy?",
-                answer: "It is none of your business."
+                answer: "We will introduce it sOon;)"
             }
         ];
         return QAData;

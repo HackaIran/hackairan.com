@@ -20,6 +20,11 @@ class Sponsors extends React.Component {
                     name: 'Tap30',
                     image: 'tap30.png',
                     link: 'https://tap30.ir/'
+                },
+                {
+                    name: 'Sphere Engine',
+                    image: 'sphere.png',
+                    link: 'https://sphere-engine.com/'
                 }
             ]
         };

@@ -2,9 +2,6 @@ class Header extends React.Component {
 
     constructor (props) {
         super();
-        window.addEventListener('load', () => {
-            document.querySelector('video').play();
-        })
     }
 
     render() {
@@ -20,6 +17,12 @@ class Header extends React.Component {
                 <div className="header__arrow-down goDownAnimation" />
             </header>
         )
+    }
+
+    componentDidMount(){
+        document.querySelector('video').onloadeddata = function(){
+            this.play();
+        }
     }
 }
 

@@ -111,7 +111,7 @@ body {
   display: grid; }
   #app > div.mainPage {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: [header-start] 100vh [header-end events-start] minmax(10rem, min-content) [events-end timeline-start] minmax(45rem, min-content) [timeline-end products-start] minmax(10rem, min-content) [products-end team-start] minmax(37rem, min-content) [team-end sponsors-start] minmax(20rem, min-content) [sponsors-end]; }
+    grid-template-rows: [header-start] 100vh [header-end events-start] minmax(10rem, min-content) [events-end timeline-start] minmax(45rem, min-content) [timeline-end products-start] minmax(10rem, min-content) [products-end team-start] minmax(37rem, min-content) [team-end sponsors-start] minmax(20rem, min-content) [sponsors-end socials-start] minmax(10rem, min-content) [socials-end]; }
   #app > div.subPage {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: [header-start] 100vh [header-end];
@@ -920,6 +920,38 @@ body {
     font-size: 2.4rem;
     padding: 1.6rem 0; }
 
+.socials {
+  margin-bottom: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem; }
+  .socials .socials__header-title {
+    color: white;
+    text-align: center;
+    font-size: 2.5rem; }
+  .socials .socials__social-icons-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2rem; }
+  .socials .socials__social-link {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+    transition-duration: 0.3s; }
+    .socials .socials__social-link:first-of-type {
+      margin-left: 0; }
+    .socials .socials__social-link:hover {
+      opacity: 0.8;
+      transition-duration: 0.3s; }
+    .socials .socials__social-link:active {
+      transform: scale(0.9);
+      transition-duration: 0.3s; }
+    .socials .socials__social-link .socials__social-icon {
+      width: 100%;
+      height: 100%; }
+
 .events {
   grid-area: events-start / 1 / events-end / -1; }
 
@@ -934,3 +966,6 @@ body {
 
 .sponsors {
   grid-area: sponsors-start / 1 / sponsors-end / -1; }
+
+.socials {
+  grid-area: socials-start / 1 / socials-end / -1; }

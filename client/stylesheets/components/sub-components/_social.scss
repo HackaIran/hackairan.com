@@ -1,0 +1,28 @@
+.socials__social-link{
+
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+
+    transition-duration: 0.3s;
+
+    &:first-of-type{
+        margin-left: 0;
+    }
+
+    &:hover{
+        opacity: 0.8;
+        transition-duration: 0.3s;
+    }
+
+    &:active{
+        transform: scale(0.9);
+        transition-duration: 0.3s;
+    }
+
+    .socials__social-icon{
+        width: 100%;
+        height: 100%;
+    }
+
+}

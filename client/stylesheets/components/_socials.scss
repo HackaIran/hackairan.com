@@ -1,0 +1,23 @@
+.socials{
+    margin-bottom: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    .socials__header-title{
+        color: white;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .socials__social-icons-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    @import './sub-components/Social';
+
+}

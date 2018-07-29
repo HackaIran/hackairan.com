@@ -5,6 +5,7 @@ import Products from './Products';
 import Members from './Members';
 import Sponsors from './Sponsors';
 import ProgressBar from './ProgressBar';
+import Socials from './Socials';
 
 class App extends React.Component {
     render() {
@@ -24,6 +25,8 @@ class App extends React.Component {
                 <Members />
 
                 <Sponsors />
+
+                <Socials />
                 
             </div>
             

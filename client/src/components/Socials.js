@@ -7,7 +7,7 @@ class Socials extends React.Component {
             <section className="socials">
                 
                 <h2 className="socials__header-title">
-                    Also find us in
+                    Also find us at
                 </h2>
 
                 <div className='socials__social-icons-wrapper'>

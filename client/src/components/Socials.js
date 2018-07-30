@@ -4,13 +4,13 @@ class Socials extends React.Component {
     render() {
 
         return (
-            <section className="socials">
+            <section className="hackaSocials">
                 
-                <h2 className="socials__header-title">
+                <h2 className="hackaSocials__header-title">
                     Also find us at
                 </h2>
 
-                <div className='socials__social-icons-wrapper'>
+                <div className='hackaSocials__social-icons-wrapper'>
                     <Social icon={`telegram.svg`} link={`https://t.me/HackaIran`} />
 
                     <Social icon={`instagram.svg`} link={`https://www.instagram.com/hackairan/`} />

@@ -920,35 +920,35 @@ body {
     font-size: 2.4rem;
     padding: 1.6rem 0; }
 
-.socials {
+.hackaSocials {
   margin-bottom: 10rem;
   margin-left: 5rem;
   margin-right: 5rem; }
-  .socials .socials__header-title {
+  .hackaSocials .hackaSocials__header-title {
     color: white;
     text-align: center;
     font-size: 2.5rem; }
-  .socials .socials__social-icons-wrapper {
+  .hackaSocials .hackaSocials__social-icons-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 2rem; }
-  .socials .socials__social-link {
+  .hackaSocials .hackaSocials__social-link {
     width: 3rem;
     height: 3rem;
     margin-left: 1.5rem;
     transition-duration: 0.3s; }
-    .socials .socials__social-link:first-of-type {
+    .hackaSocials .hackaSocials__social-link:first-of-type {
       margin-left: 0; }
-    .socials .socials__social-link:hover {
+    .hackaSocials .hackaSocials__social-link:hover {
       opacity: 0.8;
       transition-duration: 0.3s; }
-    .socials .socials__social-link:active {
+    .hackaSocials .hackaSocials__social-link:active {
       transform: scale(0.9);
       transition-duration: 0.3s; }
-    .socials .socials__social-link .socials__social-icon {
+    .hackaSocials .hackaSocials__social-link .hackaSocials__social-icon {
       width: 100%;
       height: 100%; }
 
@@ -967,5 +967,5 @@ body {
 .sponsors {
   grid-area: sponsors-start / 1 / sponsors-end / -1; }
 
-.socials {
-  grid-area: socials-start / 1 / socials-end / -1; }
+.hackaSocials {
+  grid-area: hackaSocials-start / 1 / hackaSocials-end / -1; }
